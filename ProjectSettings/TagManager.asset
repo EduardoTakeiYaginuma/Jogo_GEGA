@@ -47,6 +47,9 @@ TagManager:
   - name: Ground
     uniqueID: 367603043
     locked: 0
+  - name: Plants
+    uniqueID: 800688381
+    locked: 0
   - name: WalkInFront
     uniqueID: 3606409359
     locked: 0
