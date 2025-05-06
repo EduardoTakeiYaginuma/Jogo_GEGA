@@ -130,7 +130,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -168,7 +168,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -222,20 +222,20 @@ TextureImporter:
       name: Lizardman1_Run_full_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 210
-        width: 24
-        height: 36
+        x: 18
+        y: 209
+        width: 26
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2d145a9ad7367064582d087a2c72c81e
-      internalID: 649449172
+      spriteID: 1af5fc029aa415650800000000000000
+      internalID: 6219834650635755425
       vertices: []
       indices: 
       edges: []
@@ -244,20 +244,20 @@ TextureImporter:
       name: Lizardman1_Run_full_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 210
-        width: 26
-        height: 35
+        x: 82
+        y: 209
+        width: 28
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 53c54e2e68242844d809e1dc1a9b178c
-      internalID: 529927727
+      spriteID: 187a7039152f583b0800000000000000
+      internalID: -5510732136844908671
       vertices: []
       indices: 
       edges: []
@@ -266,20 +266,20 @@ TextureImporter:
       name: Lizardman1_Run_full_2
       rect:
         serializedVersion: 2
-        x: 148
-        y: 210
-        width: 25
-        height: 36
+        x: 147
+        y: 209
+        width: 27
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d7409336303cb55478703f602349611b
-      internalID: 351536675
+      spriteID: e2992e33e6cf85720800000000000000
+      internalID: 2835293515676817710
       vertices: []
       indices: 
       edges: []
@@ -288,20 +288,20 @@ TextureImporter:
       name: Lizardman1_Run_full_3
       rect:
         serializedVersion: 2
-        x: 212
-        y: 210
-        width: 27
-        height: 40
+        x: 211
+        y: 209
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e8f080df99ece1f40a84bbda82cf0f6b
-      internalID: -1824735665
+      spriteID: d1a92f5d9d118e2d0800000000000000
+      internalID: -3249327503852791267
       vertices: []
       indices: 
       edges: []
@@ -310,20 +310,20 @@ TextureImporter:
       name: Lizardman1_Run_full_4
       rect:
         serializedVersion: 2
-        x: 277
-        y: 210
-        width: 27
-        height: 36
+        x: 276
+        y: 209
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cccdc90251971324783395b3069abaa0
-      internalID: -1455766422
+      spriteID: 30f32f67b3cd07b80800000000000000
+      internalID: -8398971157089206525
       vertices: []
       indices: 
       edges: []
@@ -332,20 +332,20 @@ TextureImporter:
       name: Lizardman1_Run_full_5
       rect:
         serializedVersion: 2
-        x: 341
-        y: 210
-        width: 26
-        height: 35
+        x: 340
+        y: 209
+        width: 28
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f00d4877decf7f249b22e3417d690252
-      internalID: 1549268212
+      spriteID: 72c876cc37488cc30800000000000000
+      internalID: 4379896270503250983
       vertices: []
       indices: 
       edges: []
@@ -354,20 +354,20 @@ TextureImporter:
       name: Lizardman1_Run_full_6
       rect:
         serializedVersion: 2
-        x: 405
-        y: 210
-        width: 25
-        height: 36
+        x: 404
+        y: 209
+        width: 27
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 02f47a7f1bda26143b495f8c15b54171
-      internalID: -648176825
+      spriteID: 4a4b6039ef0888540800000000000000
+      internalID: 5010396416326415524
       vertices: []
       indices: 
       edges: []
@@ -376,20 +376,20 @@ TextureImporter:
       name: Lizardman1_Run_full_7
       rect:
         serializedVersion: 2
-        x: 468
-        y: 210
-        width: 24
-        height: 40
+        x: 467
+        y: 209
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ad03d0f895c15324887bc73bef11824b
-      internalID: -902673307
+      spriteID: 662c4e8b4023e6590800000000000000
+      internalID: -7679145318756859290
       vertices: []
       indices: 
       edges: []
@@ -398,20 +398,20 @@ TextureImporter:
       name: Lizardman1_Run_full_8
       rect:
         serializedVersion: 2
-        x: 21
-        y: 146
-        width: 24
-        height: 36
+        x: 20
+        y: 145
+        width: 26
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e309b4f053aa2c541acd4baab27a0212
-      internalID: -934918667
+      spriteID: c5e129c386d8c4860800000000000000
+      internalID: 7515537357006839388
       vertices: []
       indices: 
       edges: []
@@ -420,20 +420,20 @@ TextureImporter:
       name: Lizardman1_Run_full_9
       rect:
         serializedVersion: 2
-        x: 85
-        y: 145
-        width: 24
-        height: 36
+        x: 84
+        y: 144
+        width: 26
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 23ff5941f1f1b154c8dc9d8d2de9699d
-      internalID: -2103189333
+      spriteID: 97cd024d0efc20180800000000000000
+      internalID: -9150522928324879239
       vertices: []
       indices: 
       edges: []
@@ -442,20 +442,20 @@ TextureImporter:
       name: Lizardman1_Run_full_10
       rect:
         serializedVersion: 2
-        x: 148
-        y: 146
-        width: 24
-        height: 36
+        x: 147
+        y: 145
+        width: 26
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 484e41c4cc63eea479ff29b44fe8ff2a
-      internalID: -1194551753
+      spriteID: 4b685b5dd39ea98a0800000000000000
+      internalID: -6297464677136496972
       vertices: []
       indices: 
       edges: []
@@ -464,20 +464,20 @@ TextureImporter:
       name: Lizardman1_Run_full_11
       rect:
         serializedVersion: 2
-        x: 210
-        y: 146
-        width: 26
-        height: 40
+        x: 209
+        y: 145
+        width: 28
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 91b971cb242b3fa4f82df4e31c0560d4
-      internalID: 56356357
+      spriteID: ed586fe02fc95a7b0800000000000000
+      internalID: -5213588430164425250
       vertices: []
       indices: 
       edges: []
@@ -486,20 +486,20 @@ TextureImporter:
       name: Lizardman1_Run_full_12
       rect:
         serializedVersion: 2
-        x: 273
-        y: 146
-        width: 26
-        height: 36
+        x: 272
+        y: 145
+        width: 28
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 86f1ce4a056faf645b054df879991ca1
-      internalID: -1202183106
+      spriteID: 5ac66761019b13280800000000000000
+      internalID: -9065261096172622683
       vertices: []
       indices: 
       edges: []
@@ -508,20 +508,20 @@ TextureImporter:
       name: Lizardman1_Run_full_13
       rect:
         serializedVersion: 2
-        x: 338
-        y: 146
-        width: 25
-        height: 35
+        x: 337
+        y: 145
+        width: 27
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9cf97caa52cba84479cd67cccff597f6
-      internalID: 306093671
+      spriteID: f4566b4f6df609bb0800000000000000
+      internalID: -4931318622951414449
       vertices: []
       indices: 
       edges: []
@@ -530,20 +530,20 @@ TextureImporter:
       name: Lizardman1_Run_full_14
       rect:
         serializedVersion: 2
-        x: 402
-        y: 146
-        width: 25
-        height: 36
+        x: 401
+        y: 145
+        width: 27
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ee60b2a6459168e41830d08be66677c5
-      internalID: -1337665295
+      spriteID: 284be8a7844ddde40800000000000000
+      internalID: 5682931712570340482
       vertices: []
       indices: 
       edges: []
@@ -552,20 +552,20 @@ TextureImporter:
       name: Lizardman1_Run_full_15
       rect:
         serializedVersion: 2
-        x: 469
-        y: 146
-        width: 23
-        height: 40
+        x: 468
+        y: 145
+        width: 25
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 62d0865528f0d6b41be8cf72be7bd572
-      internalID: 240070914
+      spriteID: c1da220f59ec32da0800000000000000
+      internalID: -5970701537588892388
       vertices: []
       indices: 
       edges: []
@@ -574,20 +574,20 @@ TextureImporter:
       name: Lizardman1_Run_full_16
       rect:
         serializedVersion: 2
-        x: 19
-        y: 82
-        width: 27
-        height: 36
+        x: 18
+        y: 81
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 789279418ad194e4881a9dce5bf1510a
-      internalID: 1118121702
+      spriteID: 50f170568498e3280800000000000000
+      internalID: -9061654456197243131
       vertices: []
       indices: 
       edges: []
@@ -596,20 +596,20 @@ TextureImporter:
       name: Lizardman1_Run_full_17
       rect:
         serializedVersion: 2
-        x: 83
-        y: 82
-        width: 29
-        height: 34
+        x: 82
+        y: 81
+        width: 31
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 83260a9bac6d92d48baa6fc5bcc0d13b
-      internalID: 669477601
+      spriteID: ef9c1f622b5392590800000000000000
+      internalID: -7698563048739321346
       vertices: []
       indices: 
       edges: []
@@ -618,20 +618,20 @@ TextureImporter:
       name: Lizardman1_Run_full_18
       rect:
         serializedVersion: 2
-        x: 147
-        y: 82
-        width: 29
-        height: 36
+        x: 146
+        y: 81
+        width: 31
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1d20e43fd178ebe40a55b88b5eded7ea
-      internalID: 1354458565
+      spriteID: 245b0c3be96e08750800000000000000
+      internalID: 6305293047613666626
       vertices: []
       indices: 
       edges: []
@@ -640,20 +640,20 @@ TextureImporter:
       name: Lizardman1_Run_full_19
       rect:
         serializedVersion: 2
-        x: 211
-        y: 82
-        width: 25
-        height: 42
+        x: 210
+        y: 81
+        width: 27
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9cd5f7d74be5cb44e8acb80e15b26826
-      internalID: 972117750
+      spriteID: 2ec5331a7b96abfc0800000000000000
+      internalID: -3478351524785857310
       vertices: []
       indices: 
       edges: []
@@ -662,20 +662,20 @@ TextureImporter:
       name: Lizardman1_Run_full_20
       rect:
         serializedVersion: 2
-        x: 275
-        y: 82
-        width: 28
-        height: 36
+        x: 274
+        y: 81
+        width: 30
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c31ff3fbe0dfcf74cae9298cd319fe11
-      internalID: 1270196995
+      spriteID: 1fcc3ab4d0d0b99c0800000000000000
+      internalID: -3919524699941122831
       vertices: []
       indices: 
       edges: []
@@ -684,20 +684,20 @@ TextureImporter:
       name: Lizardman1_Run_full_21
       rect:
         serializedVersion: 2
-        x: 339
-        y: 82
-        width: 27
-        height: 34
+        x: 338
+        y: 81
+        width: 29
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4334ecdfd68b2674ebd5798c267c1c93
-      internalID: 94227309
+      spriteID: 6e3dd703efd285d50800000000000000
+      internalID: 6726176613236331494
       vertices: []
       indices: 
       edges: []
@@ -706,20 +706,20 @@ TextureImporter:
       name: Lizardman1_Run_full_22
       rect:
         serializedVersion: 2
-        x: 403
-        y: 82
-        width: 27
-        height: 36
+        x: 402
+        y: 81
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ef11cec02de727844bd6576820d76ecc
-      internalID: 1926415570
+      spriteID: ea5a45e829542a300800000000000000
+      internalID: 261848224096363950
       vertices: []
       indices: 
       edges: []
@@ -728,20 +728,20 @@ TextureImporter:
       name: Lizardman1_Run_full_23
       rect:
         serializedVersion: 2
-        x: 467
-        y: 82
-        width: 28
-        height: 42
+        x: 466
+        y: 81
+        width: 30
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cede896453a17f04ba8490a4302588ed
-      internalID: 461750149
+      spriteID: bf94213cb339d4f60800000000000000
+      internalID: 8020228396301830651
       vertices: []
       indices: 
       edges: []
@@ -750,20 +750,20 @@ TextureImporter:
       name: Lizardman1_Run_full_24
       rect:
         serializedVersion: 2
-        x: 18
-        y: 18
-        width: 27
-        height: 36
+        x: 17
+        y: 17
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bcd5ed865b4962e41b7a588f948e2701
-      internalID: 1668347502
+      spriteID: 0fed06373890c7cc0800000000000000
+      internalID: -3712081532679037200
       vertices: []
       indices: 
       edges: []
@@ -772,20 +772,20 @@ TextureImporter:
       name: Lizardman1_Run_full_25
       rect:
         serializedVersion: 2
-        x: 80
-        y: 18
-        width: 29
-        height: 34
+        x: 79
+        y: 17
+        width: 31
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 919e9d005d173fd4caba6bffdca718c4
-      internalID: 410240897
+      spriteID: f063eab09848cb380800000000000000
+      internalID: -8954136234978036209
       vertices: []
       indices: 
       edges: []
@@ -794,20 +794,20 @@ TextureImporter:
       name: Lizardman1_Run_full_26
       rect:
         serializedVersion: 2
-        x: 144
-        y: 18
-        width: 29
-        height: 36
+        x: 143
+        y: 17
+        width: 31
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2686f7b5c8f7b9d4ca123b12314e6196
-      internalID: 426864185
+      spriteID: bd87da8aeb8e1f9d0800000000000000
+      internalID: -2742154792520550181
       vertices: []
       indices: 
       edges: []
@@ -816,20 +816,20 @@ TextureImporter:
       name: Lizardman1_Run_full_27
       rect:
         serializedVersion: 2
-        x: 212
-        y: 18
-        width: 25
-        height: 42
+        x: 211
+        y: 17
+        width: 27
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 320d98a32affadf41b9254c0a896ae90
-      internalID: -1087199782
+      spriteID: 1447748bfbecde010800000000000000
+      internalID: 1219858396913038401
       vertices: []
       indices: 
       edges: []
@@ -838,20 +838,20 @@ TextureImporter:
       name: Lizardman1_Run_full_28
       rect:
         serializedVersion: 2
-        x: 273
-        y: 18
-        width: 28
-        height: 36
+        x: 272
+        y: 17
+        width: 30
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe0f50050df1c604cb4bbbab192baaa2
-      internalID: -389485058
+      spriteID: 854c36ae4290507a0800000000000000
+      internalID: -6411708440336153512
       vertices: []
       indices: 
       edges: []
@@ -860,20 +860,20 @@ TextureImporter:
       name: Lizardman1_Run_full_29
       rect:
         serializedVersion: 2
-        x: 338
-        y: 18
-        width: 27
-        height: 34
+        x: 337
+        y: 17
+        width: 29
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6ed2f83eed2c89b4e918d3d5ff036032
-      internalID: -744336215
+      spriteID: bb6d7bb3f16dc0510800000000000000
+      internalID: 1516822604151248571
       vertices: []
       indices: 
       edges: []
@@ -882,20 +882,20 @@ TextureImporter:
       name: Lizardman1_Run_full_30
       rect:
         serializedVersion: 2
-        x: 402
-        y: 18
-        width: 27
-        height: 36
+        x: 401
+        y: 17
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0fd938f0160a3e64684d1402c1085c02
-      internalID: 931541955
+      spriteID: 771ac26a74e5af050800000000000000
+      internalID: 5835079929035530615
       vertices: []
       indices: 
       edges: []
@@ -904,20 +904,20 @@ TextureImporter:
       name: Lizardman1_Run_full_31
       rect:
         serializedVersion: 2
-        x: 465
-        y: 18
-        width: 28
-        height: 42
+        x: 464
+        y: 17
+        width: 30
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bed279e799f704e40ac600e73897d1d9
-      internalID: 1316320965
+      spriteID: 42c78de8f6e1e8900800000000000000
+      internalID: 688521257521019940
       vertices: []
       indices: 
       edges: []
@@ -926,7 +926,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0cd4f306ab0d1c34585994b6f7b080d4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -936,38 +936,38 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lizardman1_Run_full_0: 649449172
-      Lizardman1_Run_full_1: 529927727
-      Lizardman1_Run_full_10: -1194551753
-      Lizardman1_Run_full_11: 56356357
-      Lizardman1_Run_full_12: -1202183106
-      Lizardman1_Run_full_13: 306093671
-      Lizardman1_Run_full_14: -1337665295
-      Lizardman1_Run_full_15: 240070914
-      Lizardman1_Run_full_16: 1118121702
-      Lizardman1_Run_full_17: 669477601
-      Lizardman1_Run_full_18: 1354458565
-      Lizardman1_Run_full_19: 972117750
-      Lizardman1_Run_full_2: 351536675
-      Lizardman1_Run_full_20: 1270196995
-      Lizardman1_Run_full_21: 94227309
-      Lizardman1_Run_full_22: 1926415570
-      Lizardman1_Run_full_23: 461750149
-      Lizardman1_Run_full_24: 1668347502
-      Lizardman1_Run_full_25: 410240897
-      Lizardman1_Run_full_26: 426864185
-      Lizardman1_Run_full_27: -1087199782
-      Lizardman1_Run_full_28: -389485058
-      Lizardman1_Run_full_29: -744336215
-      Lizardman1_Run_full_3: -1824735665
-      Lizardman1_Run_full_30: 931541955
-      Lizardman1_Run_full_31: 1316320965
-      Lizardman1_Run_full_4: -1455766422
-      Lizardman1_Run_full_5: 1549268212
-      Lizardman1_Run_full_6: -648176825
-      Lizardman1_Run_full_7: -902673307
-      Lizardman1_Run_full_8: -934918667
-      Lizardman1_Run_full_9: -2103189333
+      Lizardman1_Run_full_0: 6219834650635755425
+      Lizardman1_Run_full_1: -5510732136844908671
+      Lizardman1_Run_full_10: -6297464677136496972
+      Lizardman1_Run_full_11: -5213588430164425250
+      Lizardman1_Run_full_12: -9065261096172622683
+      Lizardman1_Run_full_13: -4931318622951414449
+      Lizardman1_Run_full_14: 5682931712570340482
+      Lizardman1_Run_full_15: -5970701537588892388
+      Lizardman1_Run_full_16: -9061654456197243131
+      Lizardman1_Run_full_17: -7698563048739321346
+      Lizardman1_Run_full_18: 6305293047613666626
+      Lizardman1_Run_full_19: -3478351524785857310
+      Lizardman1_Run_full_2: 2835293515676817710
+      Lizardman1_Run_full_20: -3919524699941122831
+      Lizardman1_Run_full_21: 6726176613236331494
+      Lizardman1_Run_full_22: 261848224096363950
+      Lizardman1_Run_full_23: 8020228396301830651
+      Lizardman1_Run_full_24: -3712081532679037200
+      Lizardman1_Run_full_25: -8954136234978036209
+      Lizardman1_Run_full_26: -2742154792520550181
+      Lizardman1_Run_full_27: 1219858396913038401
+      Lizardman1_Run_full_28: -6411708440336153512
+      Lizardman1_Run_full_29: 1516822604151248571
+      Lizardman1_Run_full_3: -3249327503852791267
+      Lizardman1_Run_full_30: 5835079929035530615
+      Lizardman1_Run_full_31: 688521257521019940
+      Lizardman1_Run_full_4: -8398971157089206525
+      Lizardman1_Run_full_5: 4379896270503250983
+      Lizardman1_Run_full_6: 5010396416326415524
+      Lizardman1_Run_full_7: -7679145318756859290
+      Lizardman1_Run_full_8: 7515537357006839388
+      Lizardman1_Run_full_9: -9150522928324879239
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
