@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Jogo_GEGA-5.sln"
+    "dotnet.defaultSolution": "Jogo_GEGA-7.sln"
 }
