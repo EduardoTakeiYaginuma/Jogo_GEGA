@@ -77,10 +77,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1589408881
-  m_SortingLayer: 9
+  m_SortingLayerID: 162767877
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1025619345, guid: 1a22e65b7444b3e45833810382cf736a, type: 3}
+  m_Sprite: {fileID: 955143128518842287, guid: 5326a2c2b9ff74a9d8ab9b19d2b9d348, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 4849709625528166939}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 701aef8d8aea41b4bb307731c926252e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 857a4ab1ad183483e9a82897a73d22fc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4849709625528166939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a730ca1cc5491b44ad11ab737e5ca8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f2403720fcb144b7913f1745057c691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  minDistance: 0.5
+  minDistance: 0.6
