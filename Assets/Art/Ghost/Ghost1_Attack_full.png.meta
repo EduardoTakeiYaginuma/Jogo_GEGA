@@ -1,0 +1,1556 @@
+fileFormatVersion: 2
+guid: 29d0bda1f767941ae8b2432c785e3304
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4776262151067847344
+    second: Ghost1_Attack_full_0
+  - first:
+      213: -5155454938686576554
+    second: Ghost1_Attack_full_1
+  - first:
+      213: -4898762747080371065
+    second: Ghost1_Attack_full_2
+  - first:
+      213: 5760504070699215157
+    second: Ghost1_Attack_full_3
+  - first:
+      213: 6633666556240202599
+    second: Ghost1_Attack_full_4
+  - first:
+      213: -1852885231941491515
+    second: Ghost1_Attack_full_5
+  - first:
+      213: -3348649484720431953
+    second: Ghost1_Attack_full_6
+  - first:
+      213: -2337678697071815649
+    second: Ghost1_Attack_full_7
+  - first:
+      213: 7147836105265908933
+    second: Ghost1_Attack_full_8
+  - first:
+      213: 3786472461792998141
+    second: Ghost1_Attack_full_9
+  - first:
+      213: -365307004655076411
+    second: Ghost1_Attack_full_10
+  - first:
+      213: -4007382527522380989
+    second: Ghost1_Attack_full_11
+  - first:
+      213: -4158981702264718911
+    second: Ghost1_Attack_full_12
+  - first:
+      213: 1916821478457884574
+    second: Ghost1_Attack_full_13
+  - first:
+      213: 3973086725671166642
+    second: Ghost1_Attack_full_14
+  - first:
+      213: -7664173401612244007
+    second: Ghost1_Attack_full_15
+  - first:
+      213: 9049089130611923538
+    second: Ghost1_Attack_full_16
+  - first:
+      213: -3420126949235246801
+    second: Ghost1_Attack_full_17
+  - first:
+      213: -2921083507091330411
+    second: Ghost1_Attack_full_18
+  - first:
+      213: -7350258406008141966
+    second: Ghost1_Attack_full_19
+  - first:
+      213: -2069262104628201282
+    second: Ghost1_Attack_full_20
+  - first:
+      213: -1978212305000712960
+    second: Ghost1_Attack_full_21
+  - first:
+      213: 7756072029029232100
+    second: Ghost1_Attack_full_22
+  - first:
+      213: 2076716191799412772
+    second: Ghost1_Attack_full_23
+  - first:
+      213: -1032486064147532703
+    second: Ghost1_Attack_full_24
+  - first:
+      213: 5153073020909209318
+    second: Ghost1_Attack_full_25
+  - first:
+      213: 6573313659997682341
+    second: Ghost1_Attack_full_26
+  - first:
+      213: 608900916729652724
+    second: Ghost1_Attack_full_27
+  - first:
+      213: -2549125852048894705
+    second: Ghost1_Attack_full_28
+  - first:
+      213: 791482435341243310
+    second: Ghost1_Attack_full_29
+  - first:
+      213: 1941767772910260558
+    second: Ghost1_Attack_full_30
+  - first:
+      213: 6262126658003431271
+    second: Ghost1_Attack_full_31
+  - first:
+      213: -7447067615618027617
+    second: Ghost1_Attack_full_32
+  - first:
+      213: -286231644271083233
+    second: Ghost1_Attack_full_33
+  - first:
+      213: -5282366099093412327
+    second: Ghost1_Attack_full_34
+  - first:
+      213: 8024729040357017258
+    second: Ghost1_Attack_full_35
+  - first:
+      213: 5577399775667549502
+    second: Ghost1_Attack_full_36
+  - first:
+      213: -646838347388043269
+    second: Ghost1_Attack_full_37
+  - first:
+      213: 709355893167345364
+    second: Ghost1_Attack_full_38
+  - first:
+      213: -3039363060893440739
+    second: Ghost1_Attack_full_39
+  - first:
+      213: -346847585752554787
+    second: Ghost1_Attack_full_40
+  - first:
+      213: 1541633697213506026
+    second: Ghost1_Attack_full_41
+  - first:
+      213: -7311654920330512575
+    second: Ghost1_Attack_full_42
+  - first:
+      213: -7561185505407162437
+    second: Ghost1_Attack_full_43
+  - first:
+      213: -4354081971788954278
+    second: Ghost1_Attack_full_44
+  - first:
+      213: 8147593526005961783
+    second: Ghost1_Attack_full_45
+  - first:
+      213: -3143517834676761760
+    second: Ghost1_Attack_full_46
+  - first:
+      213: 6367399065395097636
+    second: Ghost1_Attack_full_47
+  - first:
+      213: -201416152771647467
+    second: Ghost1_Attack_full_48
+  - first:
+      213: -3140211243484683469
+    second: Ghost1_Attack_full_49
+  - first:
+      213: -2100067657963750989
+    second: Ghost1_Attack_full_50
+  - first:
+      213: -3448105347236552916
+    second: Ghost1_Attack_full_51
+  - first:
+      213: -6137756169632337301
+    second: Ghost1_Attack_full_52
+  - first:
+      213: -4022529573496437476
+    second: Ghost1_Attack_full_53
+  - first:
+      213: 5366203195727184844
+    second: Ghost1_Attack_full_54
+  - first:
+      213: 593248170656815314
+    second: Ghost1_Attack_full_55
+  - first:
+      213: -61337662467287259
+    second: Ghost1_Attack_full_56
+  - first:
+      213: -1464310012798029242
+    second: Ghost1_Attack_full_57
+  - first:
+      213: 3258814616767238190
+    second: Ghost1_Attack_full_58
+  - first:
+      213: -5815106110943190208
+    second: Ghost1_Attack_full_59
+  - first:
+      213: 9167874340522644118
+    second: Ghost1_Attack_full_60
+  - first:
+      213: 7500937319293246422
+    second: Ghost1_Attack_full_61
+  - first:
+      213: 3628750407347694528
+    second: Ghost1_Attack_full_62
+  - first:
+      213: 5646118913291859316
+    second: Ghost1_Attack_full_63
+  - first:
+      213: 6950645831610682176
+    second: Ghost1_Attack_full_64
+  - first:
+      213: -2222148589176408911
+    second: Ghost1_Attack_full_65
+  - first:
+      213: -5450507376685496862
+    second: Ghost1_Attack_full_66
+  - first:
+      213: -3400937650987565045
+    second: Ghost1_Attack_full_67
+  - first:
+      213: 8934853673536134467
+    second: Ghost1_Attack_full_68
+  - first:
+      213: 7140774808676160853
+    second: Ghost1_Attack_full_69
+  - first:
+      213: 8033571038736731976
+    second: Ghost1_Attack_full_70
+  - first:
+      213: 5401528488422717732
+    second: Ghost1_Attack_full_71
+  - first:
+      213: 2593556576302485236
+    second: Ghost1_Attack_full_72
+  - first:
+      213: -7372664371161187062
+    second: Ghost1_Attack_full_73
+  - first:
+      213: 6284038610557615613
+    second: Ghost1_Attack_full_74
+  - first:
+      213: 6735211572924235250
+    second: Ghost1_Attack_full_75
+  - first:
+      213: -1808778223945999480
+    second: Ghost1_Attack_full_76
+  - first:
+      213: 7956654974846390645
+    second: Ghost1_Attack_full_77
+  - first:
+      213: 6634981244223652292
+    second: Ghost1_Attack_full_78
+  - first:
+      213: -7445428667134538482
+    second: Ghost1_Attack_full_79
+  - first:
+      213: -1109511528547972005
+    second: Ghost1_Attack_full_80
+  - first:
+      213: 6171190001434024189
+    second: Ghost1_Attack_full_81
+  - first:
+      213: 344955613362812134
+    second: Ghost1_Attack_full_82
+  - first:
+      213: -4154081802747796011
+    second: Ghost1_Attack_full_83
+  - first:
+      213: 7795219112169698091
+    second: Ghost1_Attack_full_84
+  - first:
+      213: 7127169829218954540
+    second: Ghost1_Attack_full_85
+  - first:
+      213: -1059590691447106977
+    second: Ghost1_Attack_full_86
+  - first:
+      213: 5606001050952362658
+    second: Ghost1_Attack_full_87
+  - first:
+      213: -1782041116401170232
+    second: Ghost1_Attack_full_88
+  - first:
+      213: -3770752956586591121
+    second: Ghost1_Attack_full_89
+  - first:
+      213: 7268370362133508312
+    second: Ghost1_Attack_full_90
+  - first:
+      213: -5364731562945900162
+    second: Ghost1_Attack_full_91
+  - first:
+      213: -8429190037851303184
+    second: Ghost1_Attack_full_92
+  - first:
+      213: -9150036284386733115
+    second: Ghost1_Attack_full_93
+  - first:
+      213: -9057628670047872977
+    second: Ghost1_Attack_full_94
+  - first:
+      213: 4071116903084982984
+    second: Ghost1_Attack_full_95
+  - first:
+      213: 1626551059598241751
+    second: Ghost1_Attack_full_96
+  - first:
+      213: 6980967196283722375
+    second: Ghost1_Attack_full_97
+  - first:
+      213: -900093180291390759
+    second: Ghost1_Attack_full_98
+  - first:
+      213: 4397573606593214918
+    second: Ghost1_Attack_full_99
+  - first:
+      213: -545177131822916292
+    second: Ghost1_Attack_full_100
+  - first:
+      213: 6925716601067107800
+    second: Ghost1_Attack_full_101
+  - first:
+      213: -3732847145278843200
+    second: Ghost1_Attack_full_102
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0baca84ee11b84240800000000000000
+      internalID: 4776262151067847344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658ad0c4c052478b0800000000000000
+      internalID: -5155454938686576554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7849b5d7c39140cb0800000000000000
+      internalID: -4898762747080371065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539e73d8eeb61ff40800000000000000
+      internalID: 5760504070699215157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b061316948f0c50800000000000000
+      internalID: 6633666556240202599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c46f84d2ba3946e0800000000000000
+      internalID: -1852885231941491515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac91f919053781d0800000000000000
+      internalID: -3348649484720431953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14590e4c95ee8fd0800000000000000
+      internalID: -2337678697071815649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc061f1117323360800000000000000
+      internalID: 7147836105265908933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df278f474a04c8430800000000000000
+      internalID: 3786472461792998141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb7299f63b2eeaf0800000000000000
+      internalID: -365307004655076411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343ebefb2dae268c0800000000000000
+      internalID: -4007382527522380989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c979215d245846c0800000000000000
+      internalID: -4158981702264718911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f32599afae99a10800000000000000
+      internalID: 1916821478457884574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b22371a35d332730800000000000000
+      internalID: 3973086725671166642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dba7e3d5e263a590800000000000000
+      internalID: -7664173401612244007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ad8f2ce92d49d70800000000000000
+      internalID: 9049089130611923538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29b71809a44980d0800000000000000
+      internalID: -3420126949235246801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59aa190e60a3677d0800000000000000
+      internalID: -2921083507091330411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2774e8e4ce2aef990800000000000000
+      internalID: -7350258406008141966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8757a44118843e0800000000000000
+      internalID: -2069262104628201282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005302eb36afb84e0800000000000000
+      internalID: -1978212305000712960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_22
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed61aeba6a13ab60800000000000000
+      internalID: 7756072029029232100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_23
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428818f9f5af1dc10800000000000000
+      internalID: 2076716191799412772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164f1fe156fdba1f0800000000000000
+      internalID: -1032486064147532703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e641f04c94638740800000000000000
+      internalID: 5153073020909209318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa726562f9193b50800000000000000
+      internalID: 6573313659997682341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5a41d5820437800800000000000000
+      internalID: 608900916729652724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f055cdc1b8faf9cd0800000000000000
+      internalID: -2549125852048894705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3d97cd419ebfa00800000000000000
+      internalID: 791482435341243310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e411e94608b82fa10800000000000000
+      internalID: 1941767772910260558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f6ccc640b87e650800000000000000
+      internalID: 6262126658003431271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9fa5c8b573b6a890800000000000000
+      internalID: -7447067615618027617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f110fb706d9170cf0800000000000000
+      internalID: -286231644271083233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916a8f1250441b6b0800000000000000
+      internalID: -5282366099093412327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_35
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6cd3d9b809d5f60800000000000000
+      internalID: 8024729040357017258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35f10fab87e66d40800000000000000
+      internalID: 5577399775667549502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffb5dc33f7f507f0800000000000000
+      internalID: -646838347388043269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dec19f2d6328d900800000000000000
+      internalID: 709355893167345364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15a00c366302d5d0800000000000000
+      internalID: -3039363060893440739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2640c55ffbf2bf0800000000000000
+      internalID: -346847585752554787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1ee200eabf46510800000000000000
+      internalID: 1541633697213506026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1477679b698c78a90800000000000000
+      internalID: -7311654920330512575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7af5df7d5411790800000000000000
+      internalID: -7561185505407162437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55469cf3813393c0800000000000000
+      internalID: -4354081971788954278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_45
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7349bd3e421121170800000000000000
+      internalID: 8147593526005961783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b8cf63f2bff54d0800000000000000
+      internalID: -3143517834676761760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Attack_full_47
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420770cc6bb8d5850800000000000000
+      internalID: 6367399065395097636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e3ec42c8d070a4be5ba4c12ffdc98ba1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ghost1_Attack_full_0: 4776262151067847344
+      Ghost1_Attack_full_1: -5155454938686576554
+      Ghost1_Attack_full_10: -365307004655076411
+      Ghost1_Attack_full_11: -4007382527522380989
+      Ghost1_Attack_full_12: -4158981702264718911
+      Ghost1_Attack_full_13: 1916821478457884574
+      Ghost1_Attack_full_14: 3973086725671166642
+      Ghost1_Attack_full_15: -7664173401612244007
+      Ghost1_Attack_full_16: 9049089130611923538
+      Ghost1_Attack_full_17: -3420126949235246801
+      Ghost1_Attack_full_18: -2921083507091330411
+      Ghost1_Attack_full_19: -7350258406008141966
+      Ghost1_Attack_full_2: -4898762747080371065
+      Ghost1_Attack_full_20: -2069262104628201282
+      Ghost1_Attack_full_21: -1978212305000712960
+      Ghost1_Attack_full_22: 7756072029029232100
+      Ghost1_Attack_full_23: 2076716191799412772
+      Ghost1_Attack_full_24: -1032486064147532703
+      Ghost1_Attack_full_25: 5153073020909209318
+      Ghost1_Attack_full_26: 6573313659997682341
+      Ghost1_Attack_full_27: 608900916729652724
+      Ghost1_Attack_full_28: -2549125852048894705
+      Ghost1_Attack_full_29: 791482435341243310
+      Ghost1_Attack_full_3: 5760504070699215157
+      Ghost1_Attack_full_30: 1941767772910260558
+      Ghost1_Attack_full_31: 6262126658003431271
+      Ghost1_Attack_full_32: -7447067615618027617
+      Ghost1_Attack_full_33: -286231644271083233
+      Ghost1_Attack_full_34: -5282366099093412327
+      Ghost1_Attack_full_35: 8024729040357017258
+      Ghost1_Attack_full_36: 5577399775667549502
+      Ghost1_Attack_full_37: -646838347388043269
+      Ghost1_Attack_full_38: 709355893167345364
+      Ghost1_Attack_full_39: -3039363060893440739
+      Ghost1_Attack_full_4: 6633666556240202599
+      Ghost1_Attack_full_40: -346847585752554787
+      Ghost1_Attack_full_41: 1541633697213506026
+      Ghost1_Attack_full_42: -7311654920330512575
+      Ghost1_Attack_full_43: -7561185505407162437
+      Ghost1_Attack_full_44: -4354081971788954278
+      Ghost1_Attack_full_45: 8147593526005961783
+      Ghost1_Attack_full_46: -3143517834676761760
+      Ghost1_Attack_full_47: 6367399065395097636
+      Ghost1_Attack_full_5: -1852885231941491515
+      Ghost1_Attack_full_6: -3348649484720431953
+      Ghost1_Attack_full_7: -2337678697071815649
+      Ghost1_Attack_full_8: 7147836105265908933
+      Ghost1_Attack_full_9: 3786472461792998141
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

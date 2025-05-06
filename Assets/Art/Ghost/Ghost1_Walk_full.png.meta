@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 5eb8dbf3519634e3aa879d5ab542c8f8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5447272350936818827
+    second: Ghost1_Walk_full_0
+  - first:
+      213: 4146907160727277214
+    second: Ghost1_Walk_full_1
+  - first:
+      213: -3489894403829321859
+    second: Ghost1_Walk_full_2
+  - first:
+      213: 2815494102680480874
+    second: Ghost1_Walk_full_3
+  - first:
+      213: -8129203816453557489
+    second: Ghost1_Walk_full_4
+  - first:
+      213: -6214991840269037295
+    second: Ghost1_Walk_full_5
+  - first:
+      213: -6157721059735392138
+    second: Ghost1_Walk_full_6
+  - first:
+      213: 2912181973451660468
+    second: Ghost1_Walk_full_7
+  - first:
+      213: 2169228939695972713
+    second: Ghost1_Walk_full_8
+  - first:
+      213: -4397434015170204537
+    second: Ghost1_Walk_full_9
+  - first:
+      213: 2865517516936699934
+    second: Ghost1_Walk_full_10
+  - first:
+      213: 7397830343237568094
+    second: Ghost1_Walk_full_11
+  - first:
+      213: -1450013137268907663
+    second: Ghost1_Walk_full_12
+  - first:
+      213: -4878293111600554452
+    second: Ghost1_Walk_full_13
+  - first:
+      213: 7017045094917041310
+    second: Ghost1_Walk_full_14
+  - first:
+      213: 3012363430273014892
+    second: Ghost1_Walk_full_15
+  - first:
+      213: -8653251599847872428
+    second: Ghost1_Walk_full_16
+  - first:
+      213: -689372306855207621
+    second: Ghost1_Walk_full_17
+  - first:
+      213: 5417621097093732281
+    second: Ghost1_Walk_full_18
+  - first:
+      213: 5616341875977647162
+    second: Ghost1_Walk_full_19
+  - first:
+      213: 1798022676314881752
+    second: Ghost1_Walk_full_20
+  - first:
+      213: 2633093677551720750
+    second: Ghost1_Walk_full_21
+  - first:
+      213: 4551928668774679905
+    second: Ghost1_Walk_full_22
+  - first:
+      213: -5231900606582151756
+    second: Ghost1_Walk_full_23
+  - first:
+      213: 8550661879981688708
+    second: Ghost1_Walk_full_24
+  - first:
+      213: -6238806470616002452
+    second: Ghost1_Walk_full_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 210
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b846560a759989b40800000000000000
+      internalID: 5447272350936818827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 210
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e4ca76716cc8930800000000000000
+      internalID: 4146907160727277214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 210
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f212ca787619fc0800000000000000
+      internalID: -3489894403829321859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 210
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c2a7128f4a21720800000000000000
+      internalID: 2815494102680480874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 210
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03398503344f2f80800000000000000
+      internalID: -8129203816453557489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 210
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11110d689d9efb9a0800000000000000
+      internalID: -6214991840269037295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 146
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670b78832516b8aa0800000000000000
+      internalID: -6157721059735392138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 146
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcd1e053162a6820800000000000000
+      internalID: 2912181973451660468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 146
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96163134a36aa1e10800000000000000
+      internalID: 2169228939695972713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 146
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c6f82df0d29f2c0800000000000000
+      internalID: -4397434015170204537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_10
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 146
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10ebaedffc54c720800000000000000
+      internalID: 2865517516936699934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_11
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 146
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e560845708f5aa660800000000000000
+      internalID: 7397830343237568094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 82
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171ef61fbb480ebe0800000000000000
+      internalID: -1450013137268907663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_13
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 82
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e50d4e242dc4cb0800000000000000
+      internalID: -4878293111600554452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_14
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 82
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c6d6ff55d816160800000000000000
+      internalID: 7017045094917041310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_15
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 82
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cdcc364901ec920800000000000000
+      internalID: 3012363430273014892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_16
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 82
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458acfe448979e780800000000000000
+      internalID: -8653251599847872428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_17
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 91
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d57e31a8bde66f0800000000000000
+      internalID: -689372306855207621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_18
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 82
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b71feb1fa14f2b40800000000000000
+      internalID: 5417621097093732281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_19
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a347cc6fd2141fd40800000000000000
+      internalID: 5616341875977647162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_20
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 18
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de78d7091cd3f810800000000000000
+      internalID: 1798022676314881752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 18
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e291ccebfb0aa8420800000000000000
+      internalID: 2633093677551720750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 18
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1654b31d103bb2f30800000000000000
+      internalID: 4551928668774679905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_23
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 18
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b5258c3e1e8467b0800000000000000
+      internalID: -5231900606582151756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_24
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 27
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48748ce2dad0aa670800000000000000
+      internalID: 8550661879981688708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Walk_full_25
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 18
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c605680d19e4b69a0800000000000000
+      internalID: -6238806470616002452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7a97687bad59e46a59fce3fcf312eefb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ghost1_Walk_full_0: 5447272350936818827
+      Ghost1_Walk_full_1: 4146907160727277214
+      Ghost1_Walk_full_10: 2865517516936699934
+      Ghost1_Walk_full_11: 7397830343237568094
+      Ghost1_Walk_full_12: -1450013137268907663
+      Ghost1_Walk_full_13: -4878293111600554452
+      Ghost1_Walk_full_14: 7017045094917041310
+      Ghost1_Walk_full_15: 3012363430273014892
+      Ghost1_Walk_full_16: -8653251599847872428
+      Ghost1_Walk_full_17: -689372306855207621
+      Ghost1_Walk_full_18: 5417621097093732281
+      Ghost1_Walk_full_19: 5616341875977647162
+      Ghost1_Walk_full_2: -3489894403829321859
+      Ghost1_Walk_full_20: 1798022676314881752
+      Ghost1_Walk_full_21: 2633093677551720750
+      Ghost1_Walk_full_22: 4551928668774679905
+      Ghost1_Walk_full_23: -5231900606582151756
+      Ghost1_Walk_full_24: 8550661879981688708
+      Ghost1_Walk_full_25: -6238806470616002452
+      Ghost1_Walk_full_3: 2815494102680480874
+      Ghost1_Walk_full_4: -8129203816453557489
+      Ghost1_Walk_full_5: -6214991840269037295
+      Ghost1_Walk_full_6: -6157721059735392138
+      Ghost1_Walk_full_7: 2912181973451660468
+      Ghost1_Walk_full_8: 2169228939695972713
+      Ghost1_Walk_full_9: -4397434015170204537
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

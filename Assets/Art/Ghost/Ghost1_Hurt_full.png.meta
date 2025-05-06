@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 1be9d19b099e84e37a9078afd03f3fda
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5851917882506720410
+    second: Ghost1_Hurt_full_0
+  - first:
+      213: 6887029163403473751
+    second: Ghost1_Hurt_full_1
+  - first:
+      213: 9176907071199089535
+    second: Ghost1_Hurt_full_2
+  - first:
+      213: -9116798121454316013
+    second: Ghost1_Hurt_full_3
+  - first:
+      213: -737081202595970378
+    second: Ghost1_Hurt_full_4
+  - first:
+      213: -333404202427661510
+    second: Ghost1_Hurt_full_5
+  - first:
+      213: -4145837947999880970
+    second: Ghost1_Hurt_full_6
+  - first:
+      213: -6515522741906260792
+    second: Ghost1_Hurt_full_7
+  - first:
+      213: -9118737933950552610
+    second: Ghost1_Hurt_full_8
+  - first:
+      213: 7301100883826637549
+    second: Ghost1_Hurt_full_9
+  - first:
+      213: -5272011036422851315
+    second: Ghost1_Hurt_full_10
+  - first:
+      213: -604605330175084587
+    second: Ghost1_Hurt_full_11
+  - first:
+      213: -7845420396345013806
+    second: Ghost1_Hurt_full_12
+  - first:
+      213: -457720429490547297
+    second: Ghost1_Hurt_full_13
+  - first:
+      213: 655815118991033292
+    second: Ghost1_Hurt_full_14
+  - first:
+      213: -8575234639754640187
+    second: Ghost1_Hurt_full_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 210
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b4e6ec0bfc9cea0800000000000000
+      internalID: -5851917882506720410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 210
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7537b6af884a39f50800000000000000
+      internalID: 6887029163403473751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 210
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7397932c5cea5f70800000000000000
+      internalID: 9176907071199089535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 210
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31654c15960aa7180800000000000000
+      internalID: -9116798121454316013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 146
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b246ac2d8c55c5f0800000000000000
+      internalID: -737081202595970378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 146
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a334da3f4a28f5bf0800000000000000
+      internalID: -333404202427661510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 146
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8f1251a560776c0800000000000000
+      internalID: -4145837947999880970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_7
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 146
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccb2b246963495a0800000000000000
+      internalID: -6515522741906260792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 82
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed57ff6892cb37180800000000000000
+      internalID: -9118737933950552610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 82
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaf6c92298b25560800000000000000
+      internalID: 7301100883826637549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 82
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05b31a05ed06d6b0800000000000000
+      internalID: -5272011036422851315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_11
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 82
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d73b91d7a20c97f0800000000000000
+      internalID: -604605330175084587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 18
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9404267b77f1390800000000000000
+      internalID: -7845420396345013806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_13
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 18
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95d6c9c1b9d5a9f0800000000000000
+      internalID: -457720429490547297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 18
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc38ac5406ce91900800000000000000
+      internalID: 655815118991033292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost1_Hurt_full_15
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 18
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4ccc75785aef880800000000000000
+      internalID: -8575234639754640187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 68b0e33d30109405fb46846d0ce9eb38
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ghost1_Hurt_full_0: -5851917882506720410
+      Ghost1_Hurt_full_1: 6887029163403473751
+      Ghost1_Hurt_full_10: -5272011036422851315
+      Ghost1_Hurt_full_11: -604605330175084587
+      Ghost1_Hurt_full_12: -7845420396345013806
+      Ghost1_Hurt_full_13: -457720429490547297
+      Ghost1_Hurt_full_14: 655815118991033292
+      Ghost1_Hurt_full_15: -8575234639754640187
+      Ghost1_Hurt_full_2: 9176907071199089535
+      Ghost1_Hurt_full_3: -9116798121454316013
+      Ghost1_Hurt_full_4: -737081202595970378
+      Ghost1_Hurt_full_5: -333404202427661510
+      Ghost1_Hurt_full_6: -4145837947999880970
+      Ghost1_Hurt_full_7: -6515522741906260792
+      Ghost1_Hurt_full_8: -9118737933950552610
+      Ghost1_Hurt_full_9: 7301100883826637549
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
