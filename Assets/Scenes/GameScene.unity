@@ -277,26 +277,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2222812905634251709, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 955143128518842287, guid: 5326a2c2b9ff74a9d8ab9b19d2b9d348, type: 3}
-    - target: {fileID: 2222812905634251709, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2222812905634251709, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 162767877
-      objectReference: {fileID: 0}
-    - target: {fileID: 2222812905634251709, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4172327138005068691, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 857a4ab1ad183483e9a82897a73d22fc, type: 2}
     - target: {fileID: 4849709625528166939, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -5684,6 +5664,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4817399029827765943, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817399029827765943, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
