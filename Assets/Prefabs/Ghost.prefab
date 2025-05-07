@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 4172327138005068691}
   - component: {fileID: 5019305836331826483}
   - component: {fileID: 1177513250905305274}
-  - component: {fileID: 1939630676443362905}
+  - component: {fileID: -436219609375195754}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.2, y: 0.35}
   m_Direction: 0
---- !u!114 &1939630676443362905
+--- !u!114 &-436219609375195754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,3 +192,4 @@ MonoBehaviour:
   moveSpeed: 3
   minDistance: 0.6
   prefabRef: {fileID: 4849709625528166939}
+  attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}

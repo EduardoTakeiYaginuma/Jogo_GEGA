@@ -9,7 +9,11 @@ public class GhostMovement : MonoBehaviour
 
     [Header("Pooling")]
     [Tooltip("Arraste aqui o próprio prefab do fantasma")]
-    [SerializeField] GameObject prefabRef;   // ← referência pro EnemyPool
+    [SerializeField] GameObject prefabRef;
+
+    [Header("Áudio")]
+    [Tooltip("Clip tocado no início do ataque")]
+    [SerializeField] AudioClip attackClip;
 
     Rigidbody2D rb;
     Animator    anim;
@@ -23,7 +27,7 @@ public class GhostMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
-    // sempre que o objeto sai do pool, resetamos estado básico
+    // reset sempre que sai do pool
     void OnEnable()
     {
         isAttacking = false;
@@ -43,8 +47,11 @@ public class GhostMovement : MonoBehaviour
         }
 
         Vector2 move = dir.normalized * moveSpeed;
-        rb.linearVelocity   = move;          // use velocity nas versões atuais
-
+#if UNITY_2022_3_OR_NEWER
+        rb.linearVelocity = move;
+#else
+        rb.linearVelocity = move;
+#endif
         anim.SetFloat("VelX", move.x);
         anim.SetFloat("VelY", move.y);
     }
@@ -54,20 +61,16 @@ public class GhostMovement : MonoBehaviour
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
 
-        // (direção serve só pra anim mudar o frame)
-        int d; // 0=D, 1=U, 2=L, 3=R
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-            d = dir.x < 0 ? 2 : 3;
-        else
-            d = dir.y > 0 ? 1 : 0;
+        // --- toca o som num GameObject temporário, não corta ao desativar ---
+        if (attackClip)
+            AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
 
         anim.SetTrigger("Attack");
     }
 
-    // chamado no último frame da animação via Animation Event
+    // último frame da animação
     public void AttackFinished()
     {
-        // devolve o inimigo pro pool (adeus Destroy!)
         EnemyPool.Instance.Release(gameObject, prefabRef);
     }
 }
