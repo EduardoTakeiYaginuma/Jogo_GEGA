@@ -9,7 +9,7 @@ public class GhostMovement : MonoBehaviour
 
     [Header("Pooling")]
     [Tooltip("Arraste aqui o próprio prefab do fantasma")]
-    [SerializeField] GameObject prefabRef;
+    public GameObject prefabRef;
 
     [Header("Áudio")]
     [Tooltip("Clip tocado no início do ataque")]
@@ -19,8 +19,6 @@ public class GhostMovement : MonoBehaviour
     Animator    anim;
     Transform   player;
     bool        isAttacking;
-    
-    public GameController gameController;
 
     void Awake()
     {
@@ -29,7 +27,6 @@ public class GhostMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
-    // reset sempre que sai do pool
     void OnEnable()
     {
         isAttacking = false;
@@ -49,11 +46,8 @@ public class GhostMovement : MonoBehaviour
         }
 
         Vector2 move = dir.normalized * moveSpeed;
-#if UNITY_2022_3_OR_NEWER
-        rb.linearVelocity = move;
-#else
-        rb.linearVelocity = move;
-#endif
+        rb.linearVelocity   = move;
+
         anim.SetFloat("VelX", move.x);
         anim.SetFloat("VelY", move.y);
     }
@@ -63,15 +57,15 @@ public class GhostMovement : MonoBehaviour
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
 
-        // --- toca o som num GameObject temporário, não corta ao desativar ---
         if (attackClip)
             AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
 
         anim.SetTrigger("Attack");
     }
 
-    // último frame da animação
-    public void AttackFinished()
+    public void AttackFinished() => Kill();
+
+    public void Kill()
     {
         EnemyPool.Instance.Release(gameObject, prefabRef);
     }
