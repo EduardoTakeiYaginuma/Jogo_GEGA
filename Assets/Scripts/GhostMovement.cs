@@ -4,22 +4,30 @@ using UnityEngine;
 public class GhostMovement : MonoBehaviour
 {
     [Header("Movimento")]
-    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float moveSpeed   = 3f;
     [SerializeField] float minDistance = 0.6f;
 
-    [Header("Combate")]
-   
+    [Header("Pooling")]
+    [Tooltip("Arraste aqui o próprio prefab do fantasma")]
+    [SerializeField] GameObject prefabRef;   // ← referência pro EnemyPool
 
     Rigidbody2D rb;
-    Animator anim;
-    Transform player;
-    bool isAttacking;
+    Animator    anim;
+    Transform   player;
+    bool        isAttacking;
 
     void Awake()
     {
         rb     = GetComponent<Rigidbody2D>();
         anim   = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
+    }
+
+    // sempre que o objeto sai do pool, resetamos estado básico
+    void OnEnable()
+    {
+        isAttacking = false;
+        anim.ResetTrigger("Attack");
     }
 
     void FixedUpdate()
@@ -35,7 +43,7 @@ public class GhostMovement : MonoBehaviour
         }
 
         Vector2 move = dir.normalized * moveSpeed;
-        rb.linearVelocity   = move;   // <- corrigido
+        rb.linearVelocity   = move;          // use velocity nas versões atuais
 
         anim.SetFloat("VelX", move.x);
         anim.SetFloat("VelY", move.y);
@@ -43,24 +51,23 @@ public class GhostMovement : MonoBehaviour
 
     void StartAttack(Vector2 dir)
     {
-        isAttacking  = true;
-        rb.linearVelocity  = Vector2.zero;
+        isAttacking = true;
+        rb.linearVelocity = Vector2.zero;
 
-        int d; // 0‑Down, 1‑Up, 2‑Left, 3‑Right
+        // (direção serve só pra anim mudar o frame)
+        int d; // 0=D, 1=U, 2=L, 3=R
         if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
             d = dir.x < 0 ? 2 : 3;
         else
             d = dir.y > 0 ? 1 : 0;
 
-        anim.SetInteger("Dir", d);
         anim.SetTrigger("Attack");
-       
     }
 
-    // chamado via Animation Event no último frame
+    // chamado no último frame da animação via Animation Event
     public void AttackFinished()
     {
-        Debug.Log("EVENTO AttackFinished recebido");
-        Destroy(gameObject); // ou isAttacking = false;
+        // devolve o inimigo pro pool (adeus Destroy!)
+        EnemyPool.Instance.Release(gameObject, prefabRef);
     }
 }

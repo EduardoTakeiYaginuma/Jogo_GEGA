@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4849709625528166939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 1.62, z: 0}
+  m_LocalPosition: {x: -7.11, y: 3.13, z: 0}
   m_LocalScale: {x: 3.4678, y: 3.4678, z: 3.4678}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1177513250905305274
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,3 +191,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   minDistance: 0.6
+  prefabRef: {fileID: 4849709625528166939}
