@@ -39,7 +39,6 @@ public class GhostMovement : MonoBehaviour
 
         anim.SetFloat("VelX", move.x);
         anim.SetFloat("VelY", move.y);
-        anim.SetFloat("Speed", move.sqrMagnitude);
     }
 
     void StartAttack(Vector2 dir)

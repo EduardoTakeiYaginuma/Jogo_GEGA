@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private static readonly int IS_RUNNING = Animator.StringToHash("IsRunning");
     private static readonly int TR_ATTACK  = Animator.StringToHash("Attack");     // ⬅ novo
 
+    bool isMoving; // ⬅ novo
+
     private void Awake()
     {
         rb       = GetComponent<Rigidbody2D>();
@@ -31,12 +33,18 @@ public class PlayerMovement : MonoBehaviour
 
         /* ---------- 2. FÍSICA ---------- */
         float speed = run ? runSpeed : walkSpeed;
-        rb.linearVelocity = move * speed;                          // corrige: velocity
+        rb.linearVelocity = move * speed; 
+        
+        if (rb.linearVelocity != Vector2.zero)
+            isMoving = true; // ⬅ novo
+        else
+            isMoving = false; // ⬅ novo
 
         /* ---------- 3. ANIMAÇÃO ---------- */
         animator.SetFloat(HORIZONTAL, move.x);
         animator.SetFloat(VERTICAL,   move.y);
         animator.SetBool (IS_RUNNING, run);
+        animator.SetBool ("IsMoving",  isMoving); // ⬅ novo
 
         if (atk)
             animator.SetTrigger(TR_ATTACK);                  // dispara Attack
