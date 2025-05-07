@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Velocidades")]
     [SerializeField] private float walkSpeed = 4f;
     [SerializeField] private float runSpeed  = 7f;
-
+        
+    public GameController gameController;
+    
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -26,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            gameController.TakeDamage(20);
+        }
+        
         /* ---------- 1. INPUT ---------- */
         Vector2 move = InputManager.Movement;
         bool    run  = InputManager.Running  && move != Vector2.zero;
@@ -49,4 +56,6 @@ public class PlayerMovement : MonoBehaviour
         if (atk)
             animator.SetTrigger(TR_ATTACK);                  // dispara Attack
     }
+    
+    
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -11,20 +12,14 @@ public class GameController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-    }
     
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
+            SceneManager.LoadScene(1);
+            currentHealth = 100;
         }
         
         healthBar.SetHealth(currentHealth);

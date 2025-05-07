@@ -19,6 +19,8 @@ public class GhostMovement : MonoBehaviour
     Animator    anim;
     Transform   player;
     bool        isAttacking;
+    
+    public GameController gameController;
 
     void Awake()
     {

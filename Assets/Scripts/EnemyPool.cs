@@ -7,6 +7,7 @@ public class EnemyPool : MonoBehaviour
 
     private readonly Dictionary<GameObject, Stack<GameObject>> pools = new();
 
+    public GameController gameController;
     void Awake() => Instance = this;
 
     public GameObject Get(GameObject prefab, Vector3 pos, Quaternion rot)
@@ -24,6 +25,7 @@ public class EnemyPool : MonoBehaviour
     {
         obj.SetActive(false);
         if (!pools.ContainsKey(prefab)) pools[prefab] = new Stack<GameObject>();
+        gameController.TakeDamage(10);
         pools[prefab].Push(obj);
     }
 }
