@@ -1,13 +1,14 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class mob : MonoBehaviour
+public class InsectMovement : MonoBehaviour
 {
+    /* ----------------------- Inspector ----------------------- */
     [Header("Movimento")]
-    [SerializeField] float moveSpeed = 2f;          // velocidade constante
+    [SerializeField] float moveSpeed   = 2f;   // velocidade constante
 
     [Header("Combate")]
-    [SerializeField] float attackRange = 0.6f;      // distância para iniciar ataque
+    [SerializeField] float attackRange = 0.6f; // distância p/ iniciar ataque
 
     [Header("Pooling")]
     public GameObject prefabRef;
@@ -16,18 +17,18 @@ public class mob : MonoBehaviour
     [SerializeField] AudioClip attackClip;
     [SerializeField] AudioClip deathClip;
 
+    /* ----------------------- Internals ----------------------- */
     Rigidbody2D rb;
     Animator    anim;
     Transform   player;
     bool        isAttacking;
     bool        isDead;
 
-    /* ------------------------- Unity Lifecycle ------------------------- */
-
+    /* -------------------- Unity Lifecycle -------------------- */
     void Awake()
     {
         rb     = GetComponent<Rigidbody2D>();
-        anim   = GetComponentInChildren<Animator>();   // pega Animator no filho, se houver
+        anim   = GetComponentInChildren<Animator>();          // Animator no filho, se houver
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
@@ -43,32 +44,39 @@ public class mob : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (player == null || isAttacking || isDead) return;
+        if (player == null) return;   // única saída antecipada agora
 
-        /* 1. Caminha sempre em direção ao player ------------------------ */
-        Vector2 dir  = (player.position - transform.position).normalized;
-        float   dist = Vector2.Distance(player.position, transform.position);
+        /* 1. Calcula direção e distância ---------------------- */
+        Vector2 toPlayer = player.position - transform.position;
+        float   dist     = toPlayer.magnitude;
+        Vector2 dir      = toPlayer.normalized;
 
-        if (dist > attackRange)          // ainda está longe → continua andando
+        /* 2. Move sempre em direção ao player ---------------- */
+        if (dist > 0.05f)                           // evita tremor quando colado
         {
             Vector2 nextPos = rb.position + dir * moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(nextPos);
-
-            anim.SetFloat("Speed", moveSpeed);      // liga animação de caminhada
         }
-        else                             // chegou perto → ataca
+
+        /* 3. Atualiza animação de caminhada APENAS se livre --- */
+        if (!isAttacking && !isDead)
         {
-            rb.linearVelocity = Vector2.zero;
+            anim.SetFloat("Speed", dist > attackRange ? moveSpeed : 0);
+        }
+
+        /* 4. Inicia ataque se dentro do alcance --------------- */
+        if (!isAttacking && !isDead && dist <= attackRange)
+        {
+            rb.linearVelocity = Vector2.zero;       // pára momentaneamente
             anim.SetFloat("Speed", 0);
             StartAttack();
         }
     }
 
-    /* ----------------------- Estados de Combate ----------------------- */
-
+    /* ---------------------- Combate ------------------------ */
     void StartAttack()
     {
-        if (isDead || isAttacking) return;           // dispara apenas uma vez
+        if (isDead || isAttacking) return;          // garante disparo único
         isAttacking = true;
 
         if (attackClip)
@@ -77,26 +85,20 @@ public class mob : MonoBehaviour
         anim.SetTrigger("Attack");
     }
 
-    // Animation Event no último frame do clipe Attack
+    // Animation Event no último frame de Attack
     public void AttackFinished()
     {
-        Debug.Log("<color=yellow>AttackFinished chamado!</color>");
-
         if (isDead) return;
 
         isAttacking = false;
         isDead      = true;
-
-        Debug.Log("<color=cyan>Disparando Die trigger</color>");
         anim.SetTrigger("Die");
     }
 
-
-    // Animation Event no último frame do clipe Die
+    // Animation Event no último frame de Die
     public void DeathFinished() => Despawn();
 
-    /* ----------------------------- Pool ------------------------------ */
-
+    /* ------------------------ Pool ------------------------- */
     void Despawn()
     {
         if (deathClip)
