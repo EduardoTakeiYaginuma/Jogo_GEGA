@@ -4,15 +4,15 @@ using UnityEngine;
 public class GhostMovement : MonoBehaviour
 {
     [Header("Movimento")]
-    [SerializeField] float moveSpeed   = 3f;
-    [SerializeField] float minDistance = 0.6f;
+    [SerializeField] float moveSpeed        = 3f;    // patrulha
+    [SerializeField] float attackMoveSpeed  = 1.5f;  // enquanto ataca
+    [SerializeField] float minDistance      = 0.6f;  // range p/ começar ataque
+    [SerializeField] float stopDistance     = 0.05f; // distância pra zerar vel
 
     [Header("Pooling")]
-    [Tooltip("Arraste aqui o próprio prefab do fantasma")]
     public GameObject prefabRef;
 
     [Header("Áudio")]
-    [Tooltip("Clip tocado no início do ataque")]
     [SerializeField] AudioClip attackClip;
 
     Rigidbody2D rb;
@@ -35,27 +35,42 @@ public class GhostMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isAttacking || player == null) return;
+        if (player == null) return;
 
-        Vector2 dir = player.position - transform.position;
+        // ---------- Cálculo de direção / distância ----------
+        Vector2 dir  = (Vector2)player.position - rb.position;
+        float   dist = dir.magnitude;
+        float   speed = isAttacking ? attackMoveSpeed : moveSpeed;
 
-        if (dir.sqrMagnitude < minDistance * minDistance)
+        // ---------- MOVIMENTAÇÃO SEM OVERSHOOT ----------
+        if (dist > stopDistance)
         {
-            StartAttack(dir);
-            return;
+            Vector2 nextPos = Vector2.MoveTowards(
+                                  rb.position,
+                                  (Vector2)player.position,
+                                  speed * Time.fixedDeltaTime);
+
+            rb.MovePosition(nextPos);
+
+            Vector2 vel = (nextPos - rb.position) / Time.fixedDeltaTime;
+            anim.SetFloat("VelX", vel.x);
+            anim.SetFloat("VelY", vel.y);
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+            anim.SetFloat("VelX", 0);
+            anim.SetFloat("VelY", 0);
         }
 
-        Vector2 move = dir.normalized * moveSpeed;
-        rb.linearVelocity   = move;
-
-        anim.SetFloat("VelX", move.x);
-        anim.SetFloat("VelY", move.y);
+        // ---------- CHECA SE COMEÇA ATAQUE ----------
+        if (!isAttacking && dist < minDistance)
+            StartAttack();
     }
 
-    void StartAttack(Vector2 dir)
+    void StartAttack()
     {
         isAttacking = true;
-        rb.linearVelocity = Vector2.zero;
 
         if (attackClip)
             AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
@@ -63,6 +78,7 @@ public class GhostMovement : MonoBehaviour
         anim.SetTrigger("Attack");
     }
 
+    // Animation Event no último frame do golpe
     public void AttackFinished() => Kill();
 
     public void Kill()
