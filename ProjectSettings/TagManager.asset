@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -48,26 +48,11 @@ TagManager:
   - name: Ground
     uniqueID: 367603043
     locked: 0
-  - name: Plants
-    uniqueID: 800688381
-    locked: 0
-  - name: WalkInFront
-    uniqueID: 3606409359
-    locked: 0
-  - name: Collision
-    uniqueID: 4136830605
-    locked: 0
-  - name: Player
-    uniqueID: 3477161427
-    locked: 0
-  - name: Enemies
-    uniqueID: 162767877
-    locked: 0
-  - name: WalkBehind
-    uniqueID: 3433855361
-    locked: 0
-  - name: Decor
+  - name: Objects
     uniqueID: 137227153
+    locked: 0
+  - name: Characters
+    uniqueID: 213089795
     locked: 0
   m_RenderingLayers:
   - Default

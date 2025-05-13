@@ -1,61 +1,72 @@
 using UnityEngine;
+using System.Linq;   // para First()
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Velocidades")]
-    [SerializeField] private float walkSpeed = 4f;
-    [SerializeField] private float runSpeed  = 7f;
-        
-    public GameController gameController;
-    
-    private Rigidbody2D rb;
-    private Animator animator;
+    [SerializeField] float walkSpeed = 4f;
+    [SerializeField] float runSpeed  = 7f;
 
-    // Hashes → evita alocar strings por frame
-    private static readonly int HORIZONTAL = Animator.StringToHash("Horizontal");
-    private static readonly int VERTICAL   = Animator.StringToHash("Vertical");
-    private static readonly int IS_RUNNING = Animator.StringToHash("IsRunning");
-    private static readonly int TR_ATTACK  = Animator.StringToHash("Attack");     // ⬅ novo
+    Rigidbody2D rb;
+    Animator    anim;
 
-    bool isMoving; // ⬅ novo
+    // hashes (evita alocar strings todo frame)
+    static readonly int H      = Animator.StringToHash("Horizontal");
+    static readonly int V      = Animator.StringToHash("Vertical");
+    static readonly int ISRUN  = Animator.StringToHash("IsRunning");
+    static readonly int ISMOVE = Animator.StringToHash("IsMoving");
+    static readonly int TR_ATK = Animator.StringToHash("Attack");
 
-    private void Awake()
+    bool    isAttacking;
+    Vector2 moveInput;   // armazenado para o FixedUpdate
+
+    void Awake()
     {
-        rb       = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        rb   = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            gameController.TakeDamage(20);
-        }
-        
-        /* ---------- 1. INPUT ---------- */
-        Vector2 move = InputManager.Movement;
-        bool    run  = InputManager.Running  && move != Vector2.zero;
-        bool    atk  = InputManager.Attacking;               // ⬅ novo
+        /* ---------- INPUT ---------- */
+        moveInput = new Vector2(
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical")
+        ).normalized;
 
-        /* ---------- 2. FÍSICA ---------- */
-        float speed = run ? runSpeed : walkSpeed;
-        rb.linearVelocity = move * speed; 
-        
-        if (rb.linearVelocity != Vector2.zero)
-            isMoving = true; // ⬅ novo
-        else
-            isMoving = false; // ⬅ novo
+        bool running   = Input.GetKey(KeyCode.LeftShift) && moveInput != Vector2.zero;
+        bool attackKey = Input.GetKeyDown(KeyCode.Space);
 
-        /* ---------- 3. ANIMAÇÃO ---------- */
-        animator.SetFloat(HORIZONTAL, move.x);
-        animator.SetFloat(VERTICAL,   move.y);
-        animator.SetBool (IS_RUNNING, run);
-        animator.SetBool ("IsMoving",  isMoving); // ⬅ novo
+        /* ---------- ANIM PARÂMETROS ---------- */
+        anim.SetFloat(H, moveInput.x);
+        anim.SetFloat(V, moveInput.y);
+        anim.SetBool (ISRUN,  running);
+        anim.SetBool (ISMOVE, !isAttacking && moveInput != Vector2.zero);
 
-        if (atk)
-            animator.SetTrigger(TR_ATTACK);                  // dispara Attack
+        /* ---------- ATAQUE ---------- */
+        if (attackKey && !isAttacking)
+            StartCoroutine(AttackRoutine());
     }
-    
-    
+
+    void FixedUpdate()
+    {
+        float speed = (Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed);
+        rb.linearVelocity = isAttacking ? Vector2.zero : moveInput * speed;
+    }
+
+    /* ---------- COROUTINE: dispara clipe e libera ---------- */
+    System.Collections.IEnumerator AttackRoutine()
+    {
+        isAttacking = true;
+
+        anim.ResetTrigger(TR_ATK);   // limpa restos
+        anim.SetTrigger(TR_ATK);     // dispara Attack
+
+        // pega duração do clipe atual na Layer 0 (mais robusto que Event)
+        float clipLen = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+
+        yield return new WaitForSeconds(clipLen);
+        isAttacking = false;
+    }
 }

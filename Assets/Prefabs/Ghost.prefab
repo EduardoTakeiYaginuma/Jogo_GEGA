@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4172327138005068691}
   - component: {fileID: 5019305836331826483}
   - component: {fileID: 1177513250905305274}
-  - component: {fileID: -436219609375195754}
-  m_Layer: 0
+  - component: {fileID: -2648221273092443356}
+  m_Layer: 8
   m_Name: Ghost
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -30,9 +30,9 @@ Transform:
   m_GameObject: {fileID: 4849709625528166939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.11, y: 3.13, z: 0}
-  m_LocalScale: {x: 3.4678, y: 3.4678, z: 3.4678}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 162767877
-  m_SortingLayer: 7
+  m_SortingLayerID: 213089795
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 955143128518842287, guid: 5326a2c2b9ff74a9d8ab9b19d2b9d348, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -177,7 +177,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.2, y: 0.35}
   m_Direction: 0
---- !u!114 &-436219609375195754
+--- !u!114 &-2648221273092443356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,10 +186,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4849709625528166939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2403720fcb144b7913f1745057c691, type: 3}
+  m_Script: {fileID: 11500000, guid: eab04488436c94e8f9e1639271ae50c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  minDistance: 0.6
+  attackMoveSpeed: 3
+  attackRange: 0.6
+  stopDistance: 0.05
   prefabRef: {fileID: 4849709625528166939}
   attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}
+  deathClip: {fileID: 0}
