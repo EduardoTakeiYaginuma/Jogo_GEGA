@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6127545440088856169}
   - component: {fileID: 5041218722647859339}
   - component: {fileID: 6971199294534271602}
-  - component: {fileID: -6826499567056232338}
+  - component: {fileID: -1542455208128849891}
   m_Layer: 0
   m_Name: Insect
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.56, y: -1.86, z: 0}
-  m_LocalScale: {x: 8.493212, y: 8.493212, z: 8.493212}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -177,7 +177,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.16, y: 0.14}
   m_Direction: 0
---- !u!114 &-6826499567056232338
+--- !u!114 &-1542455208128849891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,11 +186,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3799625200825450067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11d84355d412146429028ea6558f7dee, type: 3}
+  m_Script: {fileID: 11500000, guid: ed471c1a95dcd4434a4d1404222835df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  attackRange: 0.6
+  moveSpeed: 2.5
+  attackMoveSpeed: 2
+  attackRange: 1
+  stopDistance: 0.05
   prefabRef: {fileID: 3799625200825450067}
   attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}
   deathClip: {fileID: 0}
