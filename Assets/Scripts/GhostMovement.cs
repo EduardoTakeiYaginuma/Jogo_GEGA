@@ -28,9 +28,10 @@ public class GhostMovement: EnemyBase
             anim.SetFloat("VelY", 0);
         }
     }
-
+    
     public override void AttackFinished()
     {
+        player.GetComponent<GameController>()?.TakeDamage(5);
         DeathFinished();
     }
 }

@@ -25,7 +25,6 @@ public class EnemyPool : MonoBehaviour
     {
         obj.SetActive(false);
         if (!pools.ContainsKey(prefab)) pools[prefab] = new Stack<GameObject>();
-        gameController.TakeDamage(10);
         pools[prefab].Push(obj);
     }
 }

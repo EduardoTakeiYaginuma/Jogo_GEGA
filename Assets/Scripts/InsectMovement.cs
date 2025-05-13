@@ -44,6 +44,7 @@ public class InsectMovement : EnemyBase
     public override void AttackFinished()
     {
         if (isDead) return;
+        player.GetComponent<GameController>()?.TakeDamage(10);
         isAttacking = false;
         isDead = true;
         anim.SetTrigger("Die");

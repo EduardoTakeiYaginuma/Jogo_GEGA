@@ -13,41 +13,26 @@ public class GameController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        animator = GetComponent<Animator>(); // ou GetComponentInChildren<Animator>() se estiver num filho
+        healthBar.SetMaxHealth(maxHealth);
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
     {
         if (isDead) return;
-
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        if (currentHealth <= 0) Die();
     }
 
     void Die()
     {
         isDead = true;
-
-        // Dispara a animação de morte
         animator.SetTrigger("Death");
-
-        // Opcional: desativar movimento
         var movement = GetComponent<PlayerMovement>();
-        if (movement != null)
-            movement.enabled = false;
-
-        // Esperar a animação terminar
-        float deathAnimDuration = 2f; // Ajuste para o tempo exato da animação
-        Invoke(nameof(GoToMenu), deathAnimDuration);
+        if (movement != null) movement.enabled = false;
+        Invoke(nameof(GoToMenu), 2f);
     }
 
-    void GoToMenu()
-    {
-        SceneManager.LoadScene(1); // ou SceneManager.LoadScene(1), como preferir
-    }
+    void GoToMenu() => SceneManager.LoadScene(1);
 }
