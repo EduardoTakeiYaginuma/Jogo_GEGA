@@ -1,78 +1,52 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class VampiroMoviment : MonoBehaviour
+public class VampireMovement : EnemyBase
 {
-    [Header("Movimento")]
-    [SerializeField] float moveSpeed   = 3f;
-    [SerializeField] float minDistance = 0.6f;
-
-    [Header("Pooling")]
-    [Tooltip("Arraste aqui o próprio prefab do vampiro")]
-    [SerializeField] GameObject prefabRef;
-
-    [Header("Áudio")]
-    [Tooltip("Clip tocado no início do ataque")]
-    [SerializeField] AudioClip attackClip;
-
-    Rigidbody2D rb;
-    Animator    anim;
-    Transform   player;
-    bool        isAttacking;
-    
-    public GameController gameController;
-
-    void Awake()
+    protected override void Awake()
     {
-        rb     = GetComponent<Rigidbody2D>();
-        anim   = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        base.Awake();
+        anim = GetComponentInChildren<Animator>();
     }
 
-    // reset sempre que sai do pool
-    void OnEnable()
+    protected override void OnEnable()
     {
-        isAttacking = false;
+        base.OnEnable();
         anim.ResetTrigger("Attack");
     }
 
-    void FixedUpdate()
+    protected override void HandleMovement(Vector2 dir, float dist)
     {
-        if (isAttacking || player == null) return;
-
-        Vector2 dir = player.position - transform.position;
-
-        if (dir.sqrMagnitude < minDistance * minDistance)
+        float speed = isAttacking ? attackMoveSpeed : moveSpeed;
+        if (dist > stopDistance)
         {
-            StartAttack(dir);
-            return;
+            Vector2 nextPos = Vector2.MoveTowards(rb.position, player.position, speed * Time.fixedDeltaTime);
+            Vector2 delta = (nextPos - rb.position) / Time.fixedDeltaTime;
+            anim.SetFloat("VelX", delta.x);
+            anim.SetFloat("VelY", delta.y);
+            rb.MovePosition(nextPos);
         }
-
-        Vector2 move = dir.normalized * moveSpeed;
-#if UNITY_2022_3_OR_NEWER
-        rb.linearVelocity = move;
-#else
-        rb.linearVelocity = move;
-#endif
-        anim.SetFloat("VelX", move.x);
-        anim.SetFloat("VelY", move.y);
+        else if (!isAttacking)
+        {
+            isAttacking = true;
+            rb.linearVelocity = Vector2.zero;
+            if (attackClip) AudioSource.PlayClipAtPoint(attackClip, transform.position);
+            anim.SetTrigger("Attack");
+        }
     }
 
-    void StartAttack(Vector2 dir)
+    public override void AttackFinished()
     {
-        isAttacking = true;
-        rb.linearVelocity = Vector2.zero;
-
-        // --- toca o som num GameObject temporário, não corta ao desativar ---
-        if (attackClip)
-            AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
-
-        anim.SetTrigger("Attack");
+        if (isDead) return;
+        player.GetComponent<GameController>()?.TakeDamage(10);
+        Kill();
+        base.AttackFinished();
     }
 
-    // último frame da animação
-    public void AttackFinished()
+    public override void Kill()
     {
-        EnemyPool.Instance.Release(gameObject, prefabRef);
+        if (isDead) return;
+        isDead = true;
+        anim.SetTrigger("Die");
+        DeathFinished();  
     }
 }

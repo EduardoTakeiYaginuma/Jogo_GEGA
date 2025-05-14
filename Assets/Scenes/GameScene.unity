@@ -346,9 +346,11 @@ MonoBehaviour:
   player: {fileID: 1530691575}
   enemies:
   - prefab: {fileID: 4849709625528166939, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-    weight: 6
+    weight: 0
   - prefab: {fileID: 3799625200825450067, guid: 0b9572c2c6576430ab1f849b05ffd38b, type: 3}
-    weight: 4
+    weight: 0
+  - prefab: {fileID: 1286614003295994797, guid: 54ab660a52ffae04ca7be1b7b5ab9f65, type: 3}
+    weight: 10
   spawnRadius: 15
   startInterval: 2
   minInterval: 0.3
@@ -1153,7 +1155,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 256
-  tickCooldown: 1
+  tickCooldown: 2
   auraSprite: {fileID: 1990044501}
   flashTime: 0.8
   cooldownAlpha: 0.3
@@ -1228,7 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseXP: 100
-  xpExponent: 1.5
+  xpIncrement: 50
   currentLevel: 1
   currentXP: 0
   onLevelUp:

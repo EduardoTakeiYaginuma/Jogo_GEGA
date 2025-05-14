@@ -130,7 +130,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -168,7 +168,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -191,6 +191,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -922,7 +935,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem3_Death_full_0: -1072274970770019330
+      Golem3_Death_full_1: 3335089899061836799
+      Golem3_Death_full_10: -198565039225092545
+      Golem3_Death_full_11: -1728021870021227323
+      Golem3_Death_full_12: 6651518194621581137
+      Golem3_Death_full_13: -6095467669084990758
+      Golem3_Death_full_14: 7309064402538960424
+      Golem3_Death_full_15: -1297274738149289462
+      Golem3_Death_full_16: -3812383811549258452
+      Golem3_Death_full_17: -500200757870461692
+      Golem3_Death_full_18: 8333666561383031876
+      Golem3_Death_full_19: -8195926028574776426
+      Golem3_Death_full_2: -1668012487587539385
+      Golem3_Death_full_20: -5633950240420142442
+      Golem3_Death_full_21: -2132486335497869916
+      Golem3_Death_full_22: 7346121896086694008
+      Golem3_Death_full_23: -6340898570234084794
+      Golem3_Death_full_24: -445561703832340369
+      Golem3_Death_full_25: 4930547919776485931
+      Golem3_Death_full_26: 7078890287891190221
+      Golem3_Death_full_27: 4763546471051370721
+      Golem3_Death_full_28: 3600690457668195447
+      Golem3_Death_full_29: 2487941844959660415
+      Golem3_Death_full_3: -3777163292936154584
+      Golem3_Death_full_30: 2112385462941795702
+      Golem3_Death_full_31: 4356633326001483774
+      Golem3_Death_full_4: -7831641981513315982
+      Golem3_Death_full_5: 3921847179135666351
+      Golem3_Death_full_6: 3665550391480523755
+      Golem3_Death_full_7: -8274155204367425549
+      Golem3_Death_full_8: 4364596596750649397
+      Golem3_Death_full_9: -8312101181441878609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

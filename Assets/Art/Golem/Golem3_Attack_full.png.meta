@@ -277,7 +277,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -315,7 +315,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -338,6 +338,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2147,7 +2160,88 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem3_Attack_full_0: 860660560254685603
+      Golem3_Attack_full_1: -937704280889480497
+      Golem3_Attack_full_10: -4269567008091311934
+      Golem3_Attack_full_11: -1547439236841890603
+      Golem3_Attack_full_12: 9157712664051954522
+      Golem3_Attack_full_13: -2658967882289146667
+      Golem3_Attack_full_14: 8702540056564236474
+      Golem3_Attack_full_15: -8395316860997639299
+      Golem3_Attack_full_16: 2717207519022614989
+      Golem3_Attack_full_17: -2881917327993725925
+      Golem3_Attack_full_18: -6865085948562062872
+      Golem3_Attack_full_19: 2140288169203769577
+      Golem3_Attack_full_2: -1448898155199586877
+      Golem3_Attack_full_20: 6332726652726355660
+      Golem3_Attack_full_21: -3993910374498426747
+      Golem3_Attack_full_22: -1660502022861597919
+      Golem3_Attack_full_23: 2610392173466270735
+      Golem3_Attack_full_24: 7971903431950690450
+      Golem3_Attack_full_25: 8802022168706999255
+      Golem3_Attack_full_26: 571765195678391853
+      Golem3_Attack_full_27: 7870396184827635757
+      Golem3_Attack_full_28: 6953193404045066190
+      Golem3_Attack_full_29: 6012042850276934173
+      Golem3_Attack_full_3: -6422292152016285001
+      Golem3_Attack_full_30: -2232054675980375043
+      Golem3_Attack_full_31: -939247696948881782
+      Golem3_Attack_full_32: 73432345722238515
+      Golem3_Attack_full_33: 8078444323760382079
+      Golem3_Attack_full_34: 6934508420853037097
+      Golem3_Attack_full_35: -1404357266811123060
+      Golem3_Attack_full_36: 1437150929134053948
+      Golem3_Attack_full_37: -2750085726162872534
+      Golem3_Attack_full_38: 6585873687652001845
+      Golem3_Attack_full_39: -1190544648010742189
+      Golem3_Attack_full_4: 6212462159382382211
+      Golem3_Attack_full_40: -8854449604343698624
+      Golem3_Attack_full_41: 6523331058982284435
+      Golem3_Attack_full_42: 5680249151826696582
+      Golem3_Attack_full_43: 2392881026820080932
+      Golem3_Attack_full_44: -7278681783892288614
+      Golem3_Attack_full_45: 3711131786068742264
+      Golem3_Attack_full_46: -1372760521453937948
+      Golem3_Attack_full_47: 5123028982832248744
+      Golem3_Attack_full_48: -3127584680447681441
+      Golem3_Attack_full_49: 583149056756514789
+      Golem3_Attack_full_5: 5314418237231320292
+      Golem3_Attack_full_50: 1851582314166541097
+      Golem3_Attack_full_51: 3343219240612969409
+      Golem3_Attack_full_52: 3185338972161667493
+      Golem3_Attack_full_53: -6399864403269302486
+      Golem3_Attack_full_54: 5717711056858694478
+      Golem3_Attack_full_55: -3434023267051904237
+      Golem3_Attack_full_56: -7632669892483101804
+      Golem3_Attack_full_57: -8351236314932308386
+      Golem3_Attack_full_58: -3536050108621665667
+      Golem3_Attack_full_59: -6893801871886716496
+      Golem3_Attack_full_6: 1260717069723718302
+      Golem3_Attack_full_60: -5254913206806372798
+      Golem3_Attack_full_61: -697255196935005892
+      Golem3_Attack_full_62: 248743915818190661
+      Golem3_Attack_full_63: -8808788360108592328
+      Golem3_Attack_full_64: -4650887031771851884
+      Golem3_Attack_full_65: 5754666972512211105
+      Golem3_Attack_full_66: -8587310563502409904
+      Golem3_Attack_full_67: 3263991607206948954
+      Golem3_Attack_full_68: 4744086625186409096
+      Golem3_Attack_full_69: 8339175385116686234
+      Golem3_Attack_full_7: 8197906616531175450
+      Golem3_Attack_full_70: 4703018001663258487
+      Golem3_Attack_full_71: 8697888820413474038
+      Golem3_Attack_full_72: 3238932900330154374
+      Golem3_Attack_full_73: 3111125065538919243
+      Golem3_Attack_full_74: -4773170785225114990
+      Golem3_Attack_full_75: -1484830005444548159
+      Golem3_Attack_full_76: 5462269658611046896
+      Golem3_Attack_full_77: -3374939050438706310
+      Golem3_Attack_full_78: 8942837049684388952
+      Golem3_Attack_full_79: 3638393918846144458
+      Golem3_Attack_full_8: 5023807166492056463
+      Golem3_Attack_full_80: 6382539615851882676
+      Golem3_Attack_full_9: -2550470874909093063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
