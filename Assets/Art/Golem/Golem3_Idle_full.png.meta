@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem3_Idle_full_0: 6510845710882038125
+      Golem3_Idle_full_1: 3859269645596712798
+      Golem3_Idle_full_10: 1997850286620845938
+      Golem3_Idle_full_11: -4810165259079403791
+      Golem3_Idle_full_12: 1130815696021325914
+      Golem3_Idle_full_13: 28688906231891171
+      Golem3_Idle_full_14: -3430628904495498109
+      Golem3_Idle_full_15: -5364711377295880938
+      Golem3_Idle_full_2: 6556333716188387282
+      Golem3_Idle_full_3: -2538694603996858539
+      Golem3_Idle_full_4: -136837903420772277
+      Golem3_Idle_full_5: 2647842988214125683
+      Golem3_Idle_full_6: 6233805641111875048
+      Golem3_Idle_full_7: -1916094565233470460
+      Golem3_Idle_full_8: -219314872513558747
+      Golem3_Idle_full_9: -5361702182742253327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

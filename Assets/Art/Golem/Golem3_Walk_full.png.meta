@@ -922,7 +922,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem3_Walk_full_0: 6613325923460557204
+      Golem3_Walk_full_1: -5572394057525278159
+      Golem3_Walk_full_10: 8911465167256409544
+      Golem3_Walk_full_11: 6868028277951439953
+      Golem3_Walk_full_12: 6897869108808267924
+      Golem3_Walk_full_13: -8399969506281561481
+      Golem3_Walk_full_14: -531318427737942601
+      Golem3_Walk_full_15: -779074990027120699
+      Golem3_Walk_full_16: -6226570212254613919
+      Golem3_Walk_full_17: 877863263923273393
+      Golem3_Walk_full_18: -8555994927639594754
+      Golem3_Walk_full_19: -1429944358505472402
+      Golem3_Walk_full_2: -2193381935357852742
+      Golem3_Walk_full_20: -5107204949650042512
+      Golem3_Walk_full_21: -3867918280145313611
+      Golem3_Walk_full_22: -8054917430952688192
+      Golem3_Walk_full_23: 1162297821408711985
+      Golem3_Walk_full_24: -6185349165894221939
+      Golem3_Walk_full_25: 3866417177246757590
+      Golem3_Walk_full_26: 5993752172681001591
+      Golem3_Walk_full_27: 3543913709772277105
+      Golem3_Walk_full_28: -6133242358225216577
+      Golem3_Walk_full_29: -5505443927325826710
+      Golem3_Walk_full_3: 3771615846375210742
+      Golem3_Walk_full_30: -2885403345645559888
+      Golem3_Walk_full_31: -8300635071868551223
+      Golem3_Walk_full_4: 4292453725541494058
+      Golem3_Walk_full_5: -8154252469620825347
+      Golem3_Walk_full_6: 7176101480647083191
+      Golem3_Walk_full_7: -2671905678150864
+      Golem3_Walk_full_8: -296832565335118934
+      Golem3_Walk_full_9: -6788484416489292368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
