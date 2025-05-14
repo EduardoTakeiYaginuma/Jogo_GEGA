@@ -37,7 +37,7 @@ public class AuraDamage : MonoBehaviour
         {
             enemy.Kill();
             enemy.DeathFinished();
-            var px = FindObjectOfType<PlayerExperience>();
+            var px = UnityEngine.Object.FindFirstObjectByType<PlayerExperience>();
             if (px != null) px.AddXP(enemy.XPDrop);
             nextHitAllowed = Time.time + tickCooldown;
             StartCoroutine(FlashAura());
