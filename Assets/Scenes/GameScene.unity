@@ -346,11 +346,11 @@ MonoBehaviour:
   player: {fileID: 1530691575}
   enemies:
   - prefab: {fileID: 4849709625528166939, guid: cecad6d45fa7847268c8b344bc66328b, type: 3}
-    weight: 0
+    weight: 4
   - prefab: {fileID: 3799625200825450067, guid: 0b9572c2c6576430ab1f849b05ffd38b, type: 3}
-    weight: 0
+    weight: 2
   - prefab: {fileID: 1286614003295994797, guid: 54ab660a52ffae04ca7be1b7b5ab9f65, type: 3}
-    weight: 10
+    weight: 4
   spawnRadius: 15
   startInterval: 2
   minInterval: 0.3
