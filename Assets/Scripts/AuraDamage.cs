@@ -24,29 +24,33 @@ public class AuraDamage : MonoBehaviour
 
     void Update()
     {
-        if (Time.time < nextHitAllowed)
-            auraSprite.color = new Color(1f, 1f, 1f, cooldownAlpha);
-        else
-            auraSprite.color = Color.white;
+        auraSprite.color = Time.time < nextHitAllowed
+            ? new Color(1f,1f,1f,cooldownAlpha)
+            : Color.white;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (Time.time < nextHitAllowed) return;
         if (((1 << other.gameObject.layer) & enemyMask) == 0) return;
-        if (other.TryGetComponent(out EnemyBase enemy)) enemy.Kill();
-        nextHitAllowed = Time.time + tickCooldown;
-        StartCoroutine(FlashAura());
-        if (hitVFX) Instantiate(hitVFX, other.transform.position, Quaternion.identity);
+        if (other.TryGetComponent<EnemyBase>(out var enemy))
+        {
+            enemy.Kill();
+            enemy.DeathFinished();
+            var px = FindObjectOfType<PlayerExperience>();
+            if (px != null) px.AddXP(enemy.XPDrop);
+            nextHitAllowed = Time.time + tickCooldown;
+            StartCoroutine(FlashAura());
+            if (hitVFX) Instantiate(hitVFX, other.transform.position, Quaternion.identity);
+        }
     }
 
     IEnumerator FlashAura()
     {
         auraSprite.color = Color.white;
         yield return new WaitForSeconds(flashTime);
-        if (Time.time < nextHitAllowed)
-            auraSprite.color = new Color(1f, 1f, 1f, cooldownAlpha);
-        else
-            auraSprite.color = Color.white;
+        auraSprite.color = Time.time < nextHitAllowed
+            ? new Color(1f,1f,1f,cooldownAlpha)
+            : Color.white;
     }
 }

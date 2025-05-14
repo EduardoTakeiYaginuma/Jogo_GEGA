@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GhostMovement: EnemyBase
+public class GhostMovement : EnemyBase
 {
     protected override void OnEnable()
     {
@@ -11,15 +11,12 @@ public class GhostMovement: EnemyBase
     protected override void HandleMovement(Vector2 dir, float dist)
     {
         float speed = isAttacking ? attackMoveSpeed : moveSpeed;
-
         if (dist > stopDistance)
         {
             Vector2 nextPos = Vector2.MoveTowards(rb.position, player.position, speed * Time.fixedDeltaTime);
+            anim.SetFloat("VelX", (nextPos - rb.position).x / Time.fixedDeltaTime);
+            anim.SetFloat("VelY", (nextPos - rb.position).y / Time.fixedDeltaTime);
             rb.MovePosition(nextPos);
-
-            Vector2 vel = (nextPos - rb.position) / Time.fixedDeltaTime;
-            anim.SetFloat("VelX", vel.x);
-            anim.SetFloat("VelY", vel.y);
         }
         else
         {
@@ -28,10 +25,20 @@ public class GhostMovement: EnemyBase
             anim.SetFloat("VelY", 0);
         }
     }
-    
+
     public override void AttackFinished()
     {
+        if (isDead) return;
         player.GetComponent<GameController>()?.TakeDamage(5);
+        Kill();
+        base.AttackFinished();
+    }
+
+    public override void Kill()
+    {
+        if (isDead) return;
+        isDead = true;
+        anim.SetTrigger("Die");
         DeathFinished();
     }
 }

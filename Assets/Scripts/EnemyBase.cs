@@ -9,13 +9,13 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] protected float stopDistance;
 
     [Header("XP Drop")]
-    [Tooltip("Quanto XP esse inimigo dá quando morre")]
     [SerializeField] protected int xpDrop = 10;
+    public int XPDrop => xpDrop;
 
     [Header("Pooling")]
     public GameObject prefabRef;
 
-    [Header("Áudio")]
+    [Header("Audio")]
     [SerializeField] protected AudioClip attackClip;
     [SerializeField] protected AudioClip deathClip;
 
@@ -27,24 +27,22 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        rb       = GetComponent<Rigidbody2D>();
+        anim     = GetComponentInChildren<Animator>();
+        player   = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
     protected virtual void OnEnable()
     {
         isAttacking = false;
-        isDead = false;
+        isDead      = false;
     }
 
     protected virtual void FixedUpdate()
     {
         if (player == null || isDead) return;
-
-        Vector2 dir = (player.position - transform.position).normalized;
-        float dist = Vector2.Distance(player.position, transform.position);
-
+        Vector2 dir  = (player.position - transform.position).normalized;
+        float   dist = Vector2.Distance(player.position, transform.position);
         HandleMovement(dir, dist);
         HandleAttack(dist);
     }
@@ -70,7 +68,6 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void AttackFinished()
     {
-        // usado por alguns inimigos pra dar dano
         isAttacking = false;
     }
 
@@ -78,20 +75,12 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-        DeathFinished();
+        anim.SetTrigger("Die");
     }
 
     public virtual void DeathFinished()
     {
-        // primeiro, toca o som de morte
         if (deathClip) AudioSource.PlayClipAtPoint(deathClip, transform.position);
-
-        // **DROP DE XP AQUI**
-        var px = FindObjectOfType<PlayerExperience>();
-        if (px != null)
-            px.AddXP(xpDrop);
-
-        // depois, solta no pool ou destrói
         if (EnemyPool.Instance)
             EnemyPool.Instance.Release(gameObject, prefabRef);
         else

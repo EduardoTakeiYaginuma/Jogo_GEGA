@@ -20,13 +20,8 @@ public class InsectMovement : EnemyBase
     {
         float speed = isAttacking ? attackMoveSpeed : moveSpeed;
         float move = dist > stopDistance ? speed : 0f;
-
         if (move > 0f)
-        {
-            Vector2 nextPos = rb.position + dir * move * Time.fixedDeltaTime;
-            rb.MovePosition(nextPos);
-        }
-
+            rb.MovePosition(rb.position + dir * move * Time.fixedDeltaTime);
         anim.SetFloat("Speed", move);
     }
 
@@ -45,8 +40,7 @@ public class InsectMovement : EnemyBase
     {
         if (isDead) return;
         player.GetComponent<GameController>()?.TakeDamage(10);
-        isAttacking = false;
-        isDead = true;
-        anim.SetTrigger("Die");
+        Kill();
+        base.AttackFinished();
     }
 }
