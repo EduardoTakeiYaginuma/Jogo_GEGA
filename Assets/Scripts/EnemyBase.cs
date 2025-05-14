@@ -8,6 +8,10 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] protected float attackRange;
     [SerializeField] protected float stopDistance;
 
+    [Header("XP Drop")]
+    [Tooltip("Quanto XP esse inimigo dá quando morre")]
+    [SerializeField] protected int xpDrop = 10;
+
     [Header("Pooling")]
     public GameObject prefabRef;
 
@@ -49,10 +53,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (isAttacking) return;
         if (dist > stopDistance)
-        {
-            Vector2 nextPos = rb.position + dir * moveSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(nextPos);
-        }
+            rb.MovePosition(rb.position + dir * moveSpeed * Time.fixedDeltaTime);
     }
 
     protected virtual void HandleAttack(float dist)
@@ -69,6 +70,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void AttackFinished()
     {
+        // usado por alguns inimigos pra dar dano
         isAttacking = false;
     }
 
@@ -81,8 +83,18 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void DeathFinished()
     {
+        // primeiro, toca o som de morte
         if (deathClip) AudioSource.PlayClipAtPoint(deathClip, transform.position);
-        if (EnemyPool.Instance) EnemyPool.Instance.Release(gameObject, prefabRef);
-        else Destroy(gameObject);
+
+        // **DROP DE XP AQUI**
+        var px = FindObjectOfType<PlayerExperience>();
+        if (px != null)
+            px.AddXP(xpDrop);
+
+        // depois, solta no pool ou destrói
+        if (EnemyPool.Instance)
+            EnemyPool.Instance.Release(gameObject, prefabRef);
+        else
+            Destroy(gameObject);
     }
 }
