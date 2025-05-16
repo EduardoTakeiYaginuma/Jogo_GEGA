@@ -5,8 +5,8 @@ using System.Linq;   // para First()
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Velocidades")]
-    [SerializeField] float walkSpeed = 4f;
-    [SerializeField] float runSpeed  = 7f;
+    public float walkSpeed = 4f;
+    public float runSpeed  = 7f;
 
     Rigidbody2D rb;
     Animator    anim;

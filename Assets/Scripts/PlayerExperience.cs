@@ -9,6 +9,7 @@ public class PlayerExperience : MonoBehaviour
     public int currentXP = 0;
     public UnityEvent onLevelUp;
 
+
     public int XPToNextLevel => CalculateXPForLevel(currentLevel);
 
     public int CalculateXPForLevel(int level)
@@ -25,7 +26,13 @@ public class PlayerExperience : MonoBehaviour
             currentLevel++;
             onLevelUp.Invoke();
             Debug.Log($"[XP] Level UP! Agora nível {currentLevel}");
+            
+
         }
         Debug.Log($"[XP] XP atual: {currentXP}/{XPToNextLevel} no Level {currentLevel}");
+
     }
+
+
+
 }

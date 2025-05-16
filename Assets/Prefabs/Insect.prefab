@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &5041218722647859339
 Animator:
   serializedVersion: 7
@@ -193,6 +193,7 @@ MonoBehaviour:
   attackMoveSpeed: 2
   attackRange: 1
   stopDistance: 0.05
+  xpDrop: 10
   prefabRef: {fileID: 3799625200825450067}
   attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}
   deathClip: {fileID: 0}
