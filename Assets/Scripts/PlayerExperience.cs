@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-
 public class PlayerExperience : MonoBehaviour
 {
     public int baseXP = 100;
@@ -8,6 +7,9 @@ public class PlayerExperience : MonoBehaviour
     public int currentLevel = 1;
     public int currentXP = 0;
     public UnityEvent onLevelUp;
+    private XpBar xpBar;
+
+
 
 
     public int XPToNextLevel => CalculateXPForLevel(currentLevel);
@@ -29,8 +31,16 @@ public class PlayerExperience : MonoBehaviour
             
 
         }
+        xpBar?.SetXp(currentXP, XPToNextLevel, currentLevel);
+
         Debug.Log($"[XP] XP atual: {currentXP}/{XPToNextLevel} no Level {currentLevel}");
 
+    }
+
+    void Start()
+    {
+        xpBar = Object.FindFirstObjectByType<XpBar>();
+        xpBar?.SetXp(currentXP, XPToNextLevel, currentLevel);
     }
 
 

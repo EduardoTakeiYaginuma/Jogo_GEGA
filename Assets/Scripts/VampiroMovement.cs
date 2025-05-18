@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class VampireMovement : EnemyBase
 {
+    [SerializeField] private AudioSource sfxSource;
+
     protected override void Awake()
     {
         base.Awake();
@@ -29,7 +31,8 @@ public class VampireMovement : EnemyBase
         {
             isAttacking = true;
             rb.linearVelocity = Vector2.zero;
-            if (attackClip) AudioSource.PlayClipAtPoint(attackClip, transform.position);
+            if (attackClip && sfxSource)
+                sfxSource.PlayOneShot(attackClip, SettingsMenu.SfxVolume);
             anim.SetTrigger("Attack");
         }
     }

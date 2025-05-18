@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GolemMovement : EnemyBase
 {
+    [SerializeField] private AudioSource sfxSource;
+    
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -23,7 +26,8 @@ public class GolemMovement : EnemyBase
         {
             isAttacking = true;
             rb.linearVelocity = Vector2.zero;
-            if (attackClip) AudioSource.PlayClipAtPoint(attackClip, transform.position);
+            if (sfxSource && sfxSource.clip)
+                sfxSource.PlayOneShot(sfxSource.clip, SettingsMenu.SfxVolume);
             anim.SetTrigger("Attack");
         }
     }
