@@ -3,34 +3,44 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [Header("Referências")]
+    [Header("References")]
     public Transform player;
+    public EnemyEntry[] enemies;
 
-    // ——— inimigos + chance relativa ———
     [System.Serializable]
     public struct EnemyEntry
     {
-        public GameObject prefab;      // arraste o prefab
-        [Min(0f)] public float weight; // peso/chance (0 = nunca spawna)
+        public GameObject prefab;
+        [Min(0f)] public float weight;
     }
 
-    [Tooltip("Liste aqui todos os inimigos e o peso de cada um")]
-    public EnemyEntry[] enemies;
+    [Header("Spawn Settings")]
+    public float spawnRadius;
+    public float startInterval;
+    public float minInterval;
+    public float decreasePerMinute;
 
-    // ——— parâmetros de spawn ———
-    [Header("Spawn")]
-    public float spawnRadius   = 12f;
-    public float startInterval = 2f;
-    public float minInterval   = 0.3f;
-    public float decreaseStep  = 20f;
-    public float intervalMult  = 0.9f;
+    [Header("Burst Settings")]
+    public int initialBurstCount;
+    public float burstInterval;
 
-    float currentInterval;
-    float accelTimer;
+    private float currentInterval;
+    private float elapsedTime;
 
     void Start()
     {
         currentInterval = startInterval;
+        elapsedTime = 0f;
+        StartCoroutine(StartupSequence());
+    }
+
+    IEnumerator StartupSequence()
+    {
+        for (int i = 0; i < initialBurstCount; i++)
+        {
+            SpawnEnemy();
+            yield return new WaitForSeconds(burstInterval);
+        }
         StartCoroutine(SpawnLoop());
     }
 
@@ -39,15 +49,12 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             SpawnEnemy();
-
             yield return new WaitForSeconds(currentInterval);
-            accelTimer += currentInterval;
 
-            if (accelTimer >= decreaseStep && currentInterval > minInterval)
-            {
-                currentInterval = Mathf.Max(minInterval, currentInterval * intervalMult);
-                accelTimer = 0f;
-            }
+            elapsedTime += currentInterval;
+            float minutes = elapsedTime / 60f;
+            float target = startInterval - decreasePerMinute * minutes;
+            currentInterval = Mathf.Max(minInterval, target);
         }
     }
 
@@ -55,36 +62,30 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemies == null || enemies.Length == 0) return;
 
-        // 1) soma total dos pesos
-        float total = 0f;
+        float totalWeight = 0f;
         foreach (var e in enemies)
-            total += Mathf.Max(0f, e.weight);
+            totalWeight += Mathf.Max(0f, e.weight);
+        if (totalWeight <= 0f) return;
 
-        if (total <= 0f) return; // nenhum peso > 0
-
-        // 2) sorteia número entre 0 e total
-        float pick = Random.value * total;
-
-        // 3) encontra quem caiu
-        GameObject prefabEscolhido = enemies[0].prefab; // fallback
-        float acumulado = 0f;
+        float pick = Random.value * totalWeight;
+        float acc = 0f;
+        GameObject chosen = enemies[0].prefab;
         foreach (var e in enemies)
         {
-            acumulado += Mathf.Max(0f, e.weight);
-            if (pick <= acumulado)
+            acc += Mathf.Max(0f, e.weight);
+            if (pick <= acc)
             {
-                prefabEscolhido = e.prefab;
+                chosen = e.prefab;
                 break;
             }
         }
 
-        // instancia / pega do pool
         Vector2 dir = Random.insideUnitCircle.normalized;
         Vector3 pos = player.position + (Vector3)dir * spawnRadius;
-        EnemyPool.Instance.Get(prefabEscolhido, pos, Quaternion.identity);
+        EnemyPool.Instance.Get(chosen, pos, Quaternion.identity);
     }
 
-#if UNITY_EDITOR   // gizmo só no editor
+#if UNITY_EDITOR
     void OnDrawGizmosSelected()
     {
         if (!player) return;

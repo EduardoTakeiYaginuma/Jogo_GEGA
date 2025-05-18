@@ -46,7 +46,6 @@ public class VampireMovement : EnemyBase
     {
         if (isDead) return;
         isDead = true;
-        anim.SetTrigger("Die");
         DeathFinished();  
     }
 }

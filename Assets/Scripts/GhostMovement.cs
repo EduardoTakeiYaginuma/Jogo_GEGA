@@ -38,7 +38,6 @@ public class GhostMovement : EnemyBase
     {
         if (isDead) return;
         isDead = true;
-        anim.SetTrigger("Die");
         DeathFinished();
     }
 }

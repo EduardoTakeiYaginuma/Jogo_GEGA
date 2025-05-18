@@ -3,10 +3,10 @@ using UnityEngine.Events;
 
 public class PlayerExperience : MonoBehaviour
 {
-    public int baseXP = 100;
-    public int xpIncrement = 50;
-    public int currentLevel = 1;
-    public int currentXP = 0;
+    public int baseXP;
+    public int xpIncrement;
+    public int currentLevel;
+    public int currentXP;
     public UnityEvent onLevelUp;
 
 

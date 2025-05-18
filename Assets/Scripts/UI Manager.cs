@@ -8,12 +8,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject levelUpPanel;
     [SerializeField] HealthBar healthBar;
     [SerializeField] GameObject playerAura;
-    [SerializeField] GameObject [] levelUpButtons;
+    [SerializeField] GameObject[] levelUpButtons;
+    [SerializeField] GameController gameController;
 
-
-    public void UpdateHealthBar(float currentHealth)
+    public void UpdateHealthBar(int newHealth)
     {
-        healthBar.SetHealth(currentHealth);
+        gameController.SetHealth(newHealth);
         hideLevelUpPanel();
     }
 

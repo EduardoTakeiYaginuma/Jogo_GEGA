@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9047094535101789519}
   - component: {fileID: 6127545440088856169}
   - component: {fileID: 5041218722647859339}
-  - component: {fileID: 6971199294534271602}
   - component: {fileID: -1542455208128849891}
+  - component: {fileID: 5030141268336563654}
   m_Layer: 8
   m_Name: Insect
   m_TagString: Enemy
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -140,7 +140,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &6971199294534271602
+--- !u!114 &-1542455208128849891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3799625200825450067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed471c1a95dcd4434a4d1404222835df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  attackMoveSpeed: 3
+  attackRange: 1
+  stopDistance: 0.05
+  xpDrop: 10
+  prefabRef: {fileID: 3799625200825450067}
+  attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}
+  deathClip: {fileID: 0}
+--- !u!70 &5030141268336563654
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,26 +194,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.14}
+  m_Offset: {x: 0.01, y: 0}
+  m_Size: {x: 0.14, y: 0.14}
   m_Direction: 0
---- !u!114 &-1542455208128849891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3799625200825450067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed471c1a95dcd4434a4d1404222835df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2.5
-  attackMoveSpeed: 2
-  attackRange: 1
-  stopDistance: 0.05
-  xpDrop: 10
-  prefabRef: {fileID: 3799625200825450067}
-  attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}
-  deathClip: {fileID: 0}

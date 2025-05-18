@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 8878716756518394704}
   - component: {fileID: 5307876577474678318}
   - component: {fileID: 8187026182451533119}
-  m_Layer: 0
+  - component: {fileID: 2018833329916968843}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -127,8 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 4
-  runSpeed: 7
-  gameController: {fileID: 8187026182451533119}
+  runSpeed: 6
+  maxStamina: 2
+  fullRecoveryTime: 5
 --- !u!50 &5307876577474678318
 Rigidbody2D:
   serializedVersion: 5
@@ -152,10 +154,10 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8187026182451533119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,8 +171,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   healthBar: {fileID: 0}
+--- !u!114 &2018833329916968843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817399029827765943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49641e75d2f82449483834a4647fadd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseXP: 10
+  xpIncrement: 50
+  currentLevel: 1
+  currentXP: 0
+  onLevelUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ShowLevelUpPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6872803745695050950
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,9 +215,10 @@ GameObject:
   - component: {fileID: 2980919117208966523}
   - component: {fileID: 7677324424270942952}
   - component: {fileID: 7299596626974749482}
-  m_Layer: 0
+  - component: {fileID: 7381089235727571436}
+  m_Layer: 7
   m_Name: Aura
-  m_TagString: Untagged
+  m_TagString: Aura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,11 +279,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -817805869
-  m_SortingLayer: 0
+  m_SortingLayerID: 213089795
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 45d90371d5f22406784321b3fecf9e0d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -295,3 +329,23 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 3.35
+--- !u!114 &7381089235727571436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872803745695050950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64a3a178c603479680908768f7c13d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  tickCooldown: 2
+  auraSprite: {fileID: 7677324424270942952}
+  flashTime: 0.8
+  cooldownAlpha: 0.3
+  hitVFX: {fileID: 0}
