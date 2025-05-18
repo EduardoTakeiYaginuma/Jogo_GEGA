@@ -42,6 +42,5 @@ public class InsectMovement : EnemyBase
         player.GetComponent<GameController>()?.TakeDamage(10);
         Kill();
         base.AttackFinished();
-        Debug.Log("Vampire AttackFinished()");
     }
 }
