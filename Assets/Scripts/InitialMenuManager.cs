@@ -7,5 +7,15 @@ public class InitMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    
+    public void GoInitial()
+    {
+        SceneManager.LoadScene(1);
+    }
    
+    public void GoInstrucoes()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 }
