@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class StaminaBar : MonoBehaviour
 {
-    [Tooltip("Arraste aqui seu Player (com PlayerMovement)")]
+    [Tooltip("Arraste aqui seu PlayerMovement")]
     public PlayerMovement player;
     [Tooltip("Arraste aqui o Slider")]
     public Slider slider;
@@ -11,11 +11,11 @@ public class StaminaBar : MonoBehaviour
     void Start()
     {
         slider.minValue = 0f;
-        slider.maxValue = player.maxStamina;
     }
 
     void Update()
     {
-        slider.value = player.CurrentStamina;
+        slider.maxValue = player.maxStamina;      // mantém o novo máximo
+        slider.value    = player.CurrentStamina;  // atualiza o valor
     }
 }
