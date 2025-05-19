@@ -7,10 +7,6 @@
     {
         public GameObject settingsPanel;
         public Slider musicSlider;
-        public Slider sfxSlider;
-        public Slider brightnessSlider;
-        public CanvasGroup screenCanvasGroup;
-        public static float SfxVolume = 1f;
         public static float MusicVolume = 1f;
         public AudioMixer mixer;
 
@@ -18,24 +14,20 @@
 
         void Start()
         {
-            screenCanvasGroup = FindObjectOfType<CanvasGroup>();
-
-            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
+            musicSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
 
             // Aplicar volumes salvos ao mixer
-            mixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20);
-            mixer.SetFloat("SfxVolume", 0f);
+            mixer.SetFloat("MasterVolume", Mathf.Log10(musicSlider.value) * 20);
 
             musicSlider.onValueChanged.AddListener(SetMusicVolume);
-            screenCanvasGroup.alpha = brightnessSlider.value;
         }
 
 
         public void SetMusicVolume(float value)
         {
-            mixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
+            mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
             MusicVolume = value;
-            PlayerPrefs.SetFloat("MusicVolume", value);
+            PlayerPrefs.SetFloat("MasterVolume", value);
         }
 
         public void OpenSettings()
