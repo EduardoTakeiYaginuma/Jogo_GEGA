@@ -1,4 +1,3 @@
-/*  PlayerMovement.cs  */
 using System.Collections;
 using UnityEngine;
 
