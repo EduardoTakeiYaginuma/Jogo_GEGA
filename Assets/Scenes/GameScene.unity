@@ -524,12 +524,12 @@ MonoBehaviour:
     weight: 2
   - prefab: {fileID: 1286614003295994797, guid: d0bd10caae536d04bbfff826200bdedd, type: 3}
     weight: 2
-  spawnRadius: 14
-  startInterval: 1
-  minInterval: 0.3
+  spawnRadius: 30
+  startInterval: 0.8
+  minInterval: 0.2
   decreasePerMinute: 0.1
-  initialBurstCount: 10
-  burstInterval: 0.2
+  initialBurstCount: 25
+  burstInterval: 0.4
 --- !u!1 &766244609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,8 +1002,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78d1148d745814dbd974ce7427b81b84, type: 2}
-  m_sharedMaterial: {fileID: 5509011731398002954, guid: 78d1148d745814dbd974ce7427b81b84, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1914,6 +1914,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2018833329916968843, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
+      propertyPath: baseXP
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018833329916968843, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
+      propertyPath: xpIncrement
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018833329916968843, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
       propertyPath: onLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2033849050986859521}
@@ -1960,6 +1968,18 @@ PrefabInstance:
     - target: {fileID: 4817399029827765943, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817399029827765943, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817399029827765943, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872803745695050950, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8187026182451533119, guid: 3b8a52d1480081a49b8c4d4bac7fbd4c, type: 3}
       propertyPath: healthBar
@@ -2033,7 +2053,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8cdb6370f6eaf4844a9e5dc262be80ee, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6dc49e47b0f8879418f46db85290a1e8, type: 3}
   m_Resource: {fileID: 8300000, guid: 6dc49e47b0f8879418f46db85290a1e8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2230,9 +2250,11 @@ MonoBehaviour:
   healthBar: {fileID: 1696926701}
   playerAura: {fileID: 1990044500}
   levelUpButtons:
-  - {fileID: 3361571532018625427, guid: 7f66cf33bcf55ae4e978f3a8c9e2ee77, type: 3}
-  - {fileID: 2569772083812700735, guid: 7600a1b1df1e5a648b11c82e0858ee58, type: 3}
-  - {fileID: 3741843773768747912, guid: b50e7d68b6cf86348a296be2dbfef8be, type: 3}
+  - {fileID: 8615924125560814760, guid: 45671d0813d7c8e4fa50d15ce8623be5, type: 3}
+  - {fileID: 4640335932179378916, guid: 4b895805ed411784fbd5dc862da00b50, type: 3}
+  - {fileID: 8615924125560814760, guid: cda54f34c67eb704fb79eeb0a26e5dfb, type: 3}
+  - {fileID: 8615924125560814760, guid: 5a83c24accbb62c46a95b421ab430f6f, type: 3}
+  - {fileID: 8615924125560814760, guid: 09eb3d5ba8aca5f43bcb98de6220b253, type: 3}
   gameController: {fileID: 2007329656}
 --- !u!223 &3357192684750360850
 Canvas:

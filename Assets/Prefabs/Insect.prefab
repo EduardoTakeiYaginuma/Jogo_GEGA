@@ -156,7 +156,7 @@ MonoBehaviour:
   attackMoveSpeed: 3
   attackRange: 1
   stopDistance: 0.05
-  xpDrop: 10
+  xpDrop: 2
   prefabRef: {fileID: 3799625200825450067}
   attackClip: {fileID: 8300000, guid: ecbc28ee367f2f44a97451572eea3a42, type: 3}
   deathClip: {fileID: 0}

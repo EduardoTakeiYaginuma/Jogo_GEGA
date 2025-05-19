@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed;
     public float maxStamina;
     public float fullRecoveryTime;
-    float currentStamina;
-    float staminaRegenRate;
-
+    public float attackCooldown = 1f;
     public Transform attackPoint;
     public float attackRadius = 0.5f;
     public LayerMask enemyLayers;
+
+    float currentStamina;
+    float staminaRegenRate;
+    float nextAttackTime;
 
     public float CurrentStamina => currentStamina;
 
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         currentStamina = maxStamina;
         staminaRegenRate = maxStamina / fullRecoveryTime;
+        nextAttackTime = 0f;
     }
 
     void Update()
@@ -54,8 +57,12 @@ public class PlayerMovement : MonoBehaviour
         else if (!Input.GetKey(KeyCode.LeftShift) && currentStamina < maxStamina)
             currentStamina = Mathf.Min(maxStamina, currentStamina + staminaRegenRate * Time.deltaTime);
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && !isAttacking)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) 
+            && !isAttacking 
+            && Time.time >= nextAttackTime)
+        {
             StartCoroutine(AttackRoutine());
+        }
     }
 
     void FixedUpdate()
@@ -69,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         isAttacking = true;
         anim.ResetTrigger(TR_ATK);
         anim.SetTrigger(TR_ATK);
+
         float clipLen = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
         float hitTime = 0.45f;
         yield return new WaitForSeconds(hitTime);
@@ -87,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(clipLen - hitTime);
         isAttacking = false;
+        nextAttackTime = Time.time + attackCooldown;
     }
 
     void OnDrawGizmosSelected()

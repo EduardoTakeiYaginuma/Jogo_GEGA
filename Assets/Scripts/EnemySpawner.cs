@@ -24,13 +24,17 @@ public class EnemySpawner : MonoBehaviour
     public int initialBurstCount;
     public float burstInterval;
 
-    private float currentInterval;
-    private float elapsedTime;
+    float currentInterval;
+    float elapsedTime;
+
+    int totalSpawns      = 0;
+    int spawnsThisMinute = 0;
+    int currentMinute    = 0;
 
     void Start()
     {
         currentInterval = startInterval;
-        elapsedTime = 0f;
+        elapsedTime     = 0f;
         StartCoroutine(StartupSequence());
     }
 
@@ -52,8 +56,19 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(currentInterval);
 
             elapsedTime += currentInterval;
+
+            // log a cada minuto
+            if (elapsedTime >= (currentMinute + 1) * 60f)
+            {
+                currentMinute++;
+                Debug.Log(
+                    $"[Spawner] Minuto {currentMinute} - {spawnsThisMinute} inimigos - total: {totalSpawns}"
+                );
+                spawnsThisMinute = 0;
+            }
+
             float minutes = elapsedTime / 60f;
-            float target = startInterval - decreasePerMinute * minutes;
+            float target  = startInterval - decreasePerMinute * minutes;
             currentInterval = Mathf.Max(minInterval, target);
         }
     }
@@ -63,12 +78,11 @@ public class EnemySpawner : MonoBehaviour
         if (enemies == null || enemies.Length == 0) return;
 
         float totalWeight = 0f;
-        foreach (var e in enemies)
-            totalWeight += Mathf.Max(0f, e.weight);
+        foreach (var e in enemies) totalWeight += Mathf.Max(0f, e.weight);
         if (totalWeight <= 0f) return;
 
         float pick = Random.value * totalWeight;
-        float acc = 0f;
+        float acc  = 0f;
         GameObject chosen = enemies[0].prefab;
         foreach (var e in enemies)
         {
@@ -83,6 +97,10 @@ public class EnemySpawner : MonoBehaviour
         Vector2 dir = Random.insideUnitCircle.normalized;
         Vector3 pos = player.position + (Vector3)dir * spawnRadius;
         EnemyPool.Instance.Get(chosen, pos, Quaternion.identity);
+
+        // contadores
+        totalSpawns++;
+        spawnsThisMinute++;
     }
 
 #if UNITY_EDITOR

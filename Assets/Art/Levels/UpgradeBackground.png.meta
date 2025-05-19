@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6d3bb1eef4b4e489ab4c71acbeac08d6
+guid: f34a679fcf8a4a9499de30212b086699
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4706794717790886978
-    second: Button_Rectangular_Press_0
+      213: -7984503698088597490
+    second: UpgradeBackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_Rectangular_Press_0
+      name: UpgradeBackground_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 116
+        width: 1024
+        height: 1531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24c5c90bbd4e15140800000000000000
-      internalID: 4706794717790886978
+      spriteID: e08e2a7b038513190800000000000000
+      internalID: -7984503698088597490
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Button_Rectangular_Press_0: 4706794717790886978
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

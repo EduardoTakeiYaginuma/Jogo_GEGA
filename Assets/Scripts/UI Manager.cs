@@ -1,89 +1,111 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] PlayerMovement playerMovement;
-    [SerializeField] PlayerExperience playerExperience;
-    [SerializeField] GameObject levelUpPanel;
-    [SerializeField] HealthBar healthBar;
-    [SerializeField] GameObject playerAura;
-    [SerializeField] GameObject[] levelUpButtons;
-    [SerializeField] GameController gameController;
+    [SerializeField] private PlayerMovement   playerMovement;
+    [SerializeField] private PlayerExperience playerExperience;
+    [SerializeField] private GameObject       levelUpPanel;
+    [SerializeField] private HealthBar        healthBar;
+    [SerializeField] private GameObject       playerAura;
+    [SerializeField] private GameObject[]     levelUpButtons; // 0=Cura,1=Aura,2=Speed,3=XP,4=CD
+    [SerializeField] private GameController   gameController;
+
+    public void ShowLevelUpPanel()
+    {
+        levelUpPanel.SetActive(true);
+        Time.timeScale = 0f;
+        playerMovement.enabled = false;
+
+        int lvl = playerExperience.currentLevel;
+        bool mustHeal = (lvl % 3 == 0);
+        int healIndex = 0;
+
+        var pool = new List<int>();
+        for (int i = 0; i < levelUpButtons.Length; i++)
+            pool.Add(i);
+
+        // nunca deixe o healIndex no pool por padrão
+        pool.Remove(healIndex);
+
+        var choices = new List<int>();
+        if (mustHeal)
+        {
+            choices.Add(healIndex);
+        }
+
+        // sorteia até ter 3 opções
+        while (choices.Count < 3)
+        {
+            int r = Random.Range(0, pool.Count);
+            choices.Add(pool[r]);
+            pool.RemoveAt(r);
+        }
+
+        // instancia e registra listener corretamente
+        for (int i = 0; i < 3; i++)
+        {
+            int idx = choices[i];
+            var btnGO = Instantiate(levelUpButtons[idx], levelUpPanel.transform);
+            var rect  = btnGO.GetComponent<RectTransform>();
+            rect.anchoredPosition = new Vector2(-600 + 600 * i, 190);
+
+            var btn = btnGO.GetComponent<Button>();
+            int captured = idx; // captura o valor para o closure
+            btn.onClick.AddListener(() => OnUpgradeSelected(captured));
+        }
+    }
+
+    private void OnUpgradeSelected(int idx)
+    {
+        switch (idx)
+        {
+            case 0: // cura total
+                UpdateHealthBar(gameController.maxHealth);
+                break;
+            case 1: // aura +10%
+                playerAura.transform.localScale *= 1.10f;
+                break;
+            case 2: // speed +10%
+                playerMovement.walkSpeed *= 1.10f;
+                playerMovement.runSpeed  *= 1.10f;
+                break;
+            case 3: // XP×2 por 1 min
+                playerExperience.ActivateXPBoost(2f, 60f);
+                break;
+            case 4: // cooldown –10%
+                playerMovement.attackCooldown *= 0.90f;
+                break;
+        }
+        HideLevelUpPanel();
+    }
 
     public void UpdateHealthBar(int newHealth)
     {
         gameController.SetHealth(newHealth);
-        hideLevelUpPanel();
     }
 
-
-    public void IncreasePlayerSpeed(float speed)
+    public void IncreasePlayerAura(float pct)
     {
-        playerMovement.walkSpeed += speed;
-        playerMovement.runSpeed  += speed;
-        hideLevelUpPanel();
+        playerAura.transform.localScale *= 1f + pct;
     }
 
-    public void IncreasePlayerAura(float radius)
+    public void IncreasePlayerSpeed(float pct)
     {
-        playerAura.transform.localScale += playerAura.transform.localScale * radius;
-        hideLevelUpPanel();
+        playerMovement.walkSpeed *= 1f + pct;
+        playerMovement.runSpeed  *= 1f + pct;
     }
 
-
-    
-
-    public void hideLevelUpPanel()
+    private void HideLevelUpPanel()
     {
-        levelUpPanel.SetActive(false);
-        Time.timeScale = 1; // Retorna o tempo ao normal
-        playerMovement.enabled = true; // Habilita o movimento do jogador
-        for (int i=0 ; i<3; i++){
+        for (int i = levelUpPanel.transform.childCount - 1; i >= 0; i--)
             Destroy(levelUpPanel.transform.GetChild(i).gameObject);
-        }
+
+        levelUpPanel.SetActive(false);
+        Time.timeScale = 1f;
+        playerMovement.enabled = true;
+
+        playerExperience.ClearWaitingFlag();   // libera novos ganhos de XP
     }
-    
-    public void ShowLevelUpPanel()
-    {
-        
-        for (int i=0; i<3; i++){
-            Vector3 firstPosition = new Vector3(-600 + 600*i, 190, 0);
-            int randomIndex = Random.Range(0, levelUpButtons.Length);
-
-            GameObject spawned = Instantiate(levelUpButtons[randomIndex], firstPosition, levelUpButtons[randomIndex].transform.rotation, levelUpPanel.transform);
-            RectTransform rectTransform = spawned.GetComponent<RectTransform>();
-            rectTransform.anchoredPosition = firstPosition;
-
-            // Adiciona o evento de clique ao botão
-
-            Button button = spawned.GetComponent<Button>();
-
-
-            if (button != null)
-            {
-                button.onClick.AddListener(() => {
-                    // Chama a função correspondente ao botão
-                    if (randomIndex == 2)
-                    {
-                        IncreasePlayerSpeed(1.5f);
-                    }
-                    else if (randomIndex == 0)
-                    {
-                        UpdateHealthBar(100);
-                    }
-                    else if (randomIndex == 1)
-                    {
-                        IncreasePlayerAura(0.2f);
-                    }
-                });
-            }
-
-        }
-        Time.timeScale = 0; // Pausa o jogo
-        playerMovement.enabled = false; // Desabilita o movimento do jogador
-        levelUpPanel.SetActive(true);
-    }
-
-
 }
