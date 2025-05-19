@@ -1,42 +1,29 @@
-    using UnityEngine;
-    using UnityEngine.UI;
-    using UnityEngine.Audio;
+using UnityEngine;
+using UnityEngine.UI;
 
+public class SettingsMenu : MonoBehaviour
+{
+    [SerializeField] GameObject settingsPanel;
+    [SerializeField] Slider      musicSlider;
 
-    public class SettingsMenu : MonoBehaviour
+    const string PrefKey = "MasterVolume";
+
+    void Start()
     {
-        public GameObject settingsPanel;
-        public Slider musicSlider;
-        public static float MusicVolume = 1f;
-        public AudioMixer mixer;
+        float saved = PlayerPrefs.GetFloat(PrefKey, 1f);
+        musicSlider.value = saved;
+        ApplyVolume(saved);
 
-
-
-        void Start()
-        {
-            musicSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
-
-            // Aplicar volumes salvos ao mixer
-            mixer.SetFloat("MasterVolume", Mathf.Log10(musicSlider.value) * 20);
-
-            musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        }
-
-
-        public void SetMusicVolume(float value)
-        {
-            mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
-            MusicVolume = value;
-            PlayerPrefs.SetFloat("MasterVolume", value);
-        }
-
-        public void OpenSettings()
-        {
-            settingsPanel.SetActive(true);
-        }
-
-        public void CloseSettings()
-        {
-            settingsPanel.SetActive(false);
-        }
+        musicSlider.onValueChanged.AddListener(ApplyVolume);
     }
+
+    void ApplyVolume(float value)
+    {
+        // volume global: 0-1
+        AudioListener.volume = Mathf.Clamp01(value);
+        PlayerPrefs.SetFloat(PrefKey, value);
+    }
+
+    public void OpenSettings()  => settingsPanel.SetActive(true);
+    public void CloseSettings() => settingsPanel.SetActive(false);
+}

@@ -10,8 +10,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject       levelUpPanel;
     [SerializeField] HealthBar        healthBar;
     [SerializeField] GameObject       playerAura;
-    [SerializeField] GameObject[]     levelUpButtons;   // 0 Cure,1 Aura,2 Speed,3 XP×2,4 CD,5 StaminaMax,6 StaminaRegen
+    [SerializeField] GameObject[]     levelUpButtons;   // 0 Cure,1 Aura,2 Speed,3 XP×2,4 CD,5 StaminaMax,6 StaminaRegen,7 Dmg–
     [SerializeField] GameController   gameController;
+
+    /* ===================================================================== */
 
     public void ShowLevelUpPanel()
     {
@@ -19,62 +21,64 @@ public class UIManager : MonoBehaviour
         Time.timeScale         = 0f;
         playerMovement.enabled = false;
 
-        int level = playerExperience.currentLevel;
-        bool mustHeal = (level % 3 == 0);
-        int healIdx   = 0;
+        int level   = playerExperience.currentLevel;
+        int healIdx = 0;
+        int dmgIdx  = 7;
 
-        var pool = new List<int>();
-        for (int i = 0; i < levelUpButtons.Length; i++) pool.Add(i);
-        pool.Remove(healIdx);
+        bool healMandatory = (level % 2 == 0 && level > 2);  // 4,6,8,…
+        bool dmgMandatory  = (level % 3 == 0);               // 3,6,9,…
 
         var choices = new List<int>();
-        if (mustHeal) choices.Add(healIdx);
 
-        while (choices.Count < 3)
+        /* ----------------- 1) adiciona obrigatórios ------------------ */
+        if (healMandatory) choices.Add(healIdx);
+        if (dmgMandatory)  choices.Add(dmgIdx);
+
+        /* ----------------- 2) monta pool sem heal/dmg ---------------- */
+        var pool = new List<int>();
+        for (int i = 0; i < levelUpButtons.Length; i++)
+        {
+            if (i == healIdx || i == dmgIdx) continue;   // nunca sorteia
+            pool.Add(i);
+        }
+
+        /* ----------------- 3) completa até ter 3 opções -------------- */
+        while (choices.Count < 3 && pool.Count > 0)
         {
             int r = Random.Range(0, pool.Count);
             choices.Add(pool[r]);
             pool.RemoveAt(r);
         }
 
+        /* ----------------- 4) instância botões ----------------------- */
         for (int i = 0; i < 3; i++)
         {
             int idx = choices[i];
             var go  = Instantiate(levelUpButtons[idx], levelUpPanel.transform);
-            go.GetComponent<RectTransform>().anchoredPosition = new Vector2(-600 + 600 * i, 190);
+            go.GetComponent<RectTransform>().anchoredPosition =
+                new Vector2(-600 + 600 * i, 190);
 
             int captured = idx;
-            go.GetComponent<Button>().onClick.AddListener(() => OnUpgradeSelected(captured));
+            go.GetComponent<Button>()
+              .onClick.AddListener(() => OnUpgradeSelected(captured));
         }
     }
 
+    /* -------------------- resto do script permanece ----------------- */
     void OnUpgradeSelected(int idx)
     {
         switch (idx)
         {
-            case 0:                                   // Cura total
-                gameController.SetHealth(gameController.maxHealth);
-                break;
-            case 1:                                   // Aura +10 %
-                playerAura.transform.localScale *= 1.10f;
-                break;
-            case 2:                                   // Velocidade +10 %
-                playerMovement.walkSpeed *= 1.10f;
-                playerMovement.runSpeed  *= 1.10f;
-                break;
-            case 3:                                   // XP×2 por 1 min
-                playerExperience.ActivateXPBoost(2f, 60f);
-                break;
-            case 4:                                   // Cooldown –10 %
-                playerMovement.attackCooldown *= 0.90f;
-                playerMovement.ClampAttackCooldown();   // aplica piso
-                break;
-            case 5:                                   // Stamina Máx +10 %
-                playerMovement.IncreaseMaxStamina(0.10f);
-                break;
-            case 6:                                   // Stamina Regen +10 %
-                playerMovement.BoostStaminaRegen(0.10f);
-                break;
+            case 0: gameController.SetHealth(gameController.maxHealth);        break; // Cura
+            case 1: playerAura.transform.localScale *= 1.10f;                  break; // Aura
+            case 2: playerMovement.walkSpeed *= 1.10f;                         // Veloc.
+                    playerMovement.runSpeed  *= 1.10f;                         break;
+            case 3: playerExperience.ActivateXPBoost(2f, 60f);                 break; // XP×2
+            case 4: playerMovement.attackCooldown *= 0.90f;                    // CD –
+                    playerMovement.ClampAttackCooldown();                       break;
+            case 5: playerMovement.IncreaseMaxStamina(0.10f);                  break; // Stamina+
+            case 6: playerMovement.BoostStaminaRegen(0.10f);                   break; // Regen+
+            case 7: gameController.ReduceDamageTaken(0.10f);                   break; // Dano –
         }
         HideLevelUpPanel();
     }

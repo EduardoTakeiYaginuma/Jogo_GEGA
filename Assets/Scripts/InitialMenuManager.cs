@@ -5,17 +5,17 @@ public class InitMenuManager : MonoBehaviour
 {
     public void IniciaJogo()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
     
     public void GoInitial()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
    
     public void GoInstrucoes()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
 }

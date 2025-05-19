@@ -57,8 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        rb             = GetComponent<Rigidbody2D>();
-        anim           = GetComponent<Animator>();
+        rb   = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         baseMaxStamina = maxStamina;
         baseRecovery   = fullRecoveryTime;
@@ -69,16 +69,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        moveInput   = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"),
+                                Input.GetAxisRaw("Vertical")).normalized;
+
         bool wantsRun = Input.GetKey(KeyCode.LeftShift) && moveInput != Vector2.zero;
-        isRunning    = wantsRun && currentStamina > 0f;
+        isRunning     = wantsRun && currentStamina > 0f;
 
         anim.SetFloat(H, moveInput.x);
         anim.SetFloat(V, moveInput.y);
         anim.SetBool(ISRUN,  isRunning);
         anim.SetBool(ISMOVE, !isAttacking && moveInput != Vector2.zero);
 
-        /* ----- consumo / regeneração da stamina ----- */
+        /* ---- consumo / regeneração da stamina ---- */
         if (isRunning)
         {
             float drain = Time.deltaTime / staminaScale;
@@ -86,10 +88,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (!Input.GetKey(KeyCode.LeftShift) && currentStamina < maxStamina)
         {
-            currentStamina = Mathf.Min(maxStamina, currentStamina + staminaRegenRate * Time.deltaTime);
+            currentStamina = Mathf.Min(maxStamina,
+                                       currentStamina + staminaRegenRate * Time.deltaTime);
         }
 
-        /* ----- ataque ----- */
+        /* ---- ataque ---- */
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) &&
             !isAttacking && Time.time >= nextAttackTime)
         {
@@ -113,14 +116,19 @@ public class PlayerMovement : MonoBehaviour
         float hitTime = 0.45f;
         yield return new WaitForSeconds(hitTime);
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position,
+                                                       attackRadius,
+                                                       enemyLayers);
         foreach (var col in hits)
             if (col.TryGetComponent<EnemyBase>(out var enemy))
             {
                 enemy.Kill();
                 enemy.DeathFinished();
+
                 var px = Object.FindFirstObjectByType<PlayerExperience>();
                 if (px != null) px.AddXP(enemy.XPDrop);
+
+                KillCounter.Instance?.RegisterKill();   // +1 kill
             }
 
         yield return new WaitForSeconds(clipLen - hitTime);
@@ -151,7 +159,8 @@ public class PlayerMovement : MonoBehaviour
     void RecomputeStaminaStats()
     {
         maxStamina       = baseMaxStamina * staminaScale;
-        fullRecoveryTime = Mathf.Max(baseRecovery * staminaScale * regenScale, minFullRecovery);
+        fullRecoveryTime = Mathf.Max(baseRecovery * staminaScale * regenScale,
+                                     minFullRecovery);
         staminaRegenRate = maxStamina / fullRecoveryTime;
         currentStamina   = Mathf.Min(currentStamina, maxStamina);
     }

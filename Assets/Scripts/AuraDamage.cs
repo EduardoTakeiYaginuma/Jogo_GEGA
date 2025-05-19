@@ -39,6 +39,7 @@ public class AuraDamage : MonoBehaviour
             enemy.DeathFinished();
             var px = UnityEngine.Object.FindFirstObjectByType<PlayerExperience>();
             if (px != null) px.AddXP(enemy.XPDrop);
+            KillCounter.Instance?.RegisterKill();  
             nextHitAllowed = Time.time + tickCooldown;
             StartCoroutine(FlashAura());
             if (hitVFX) Instantiate(hitVFX, other.transform.position, Quaternion.identity);
