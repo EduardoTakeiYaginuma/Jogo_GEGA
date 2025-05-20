@@ -72,8 +72,10 @@ public class GameController : MonoBehaviour
         if (movement != null)
             movement.enabled = false;
 
-        Invoke(nameof(GoToMenu), 3f);
+        Invoke(nameof(GoToGameover), 3f);
     }
 
     void GoToMenu() => SceneManager.LoadScene(0);
+    
+    void GoToGameover() => SceneManager.LoadScene(3);
 }
