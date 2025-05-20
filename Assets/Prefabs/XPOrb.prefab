@@ -168,3 +168,5 @@ MonoBehaviour:
   xpAmount: 15
   attractionRange: 2.5
   speed: 6
+  pickupSfx: {fileID: 8300000, guid: b013420225e400a45ac984989824e5a2, type: 3}
+  sfxVolume: 1

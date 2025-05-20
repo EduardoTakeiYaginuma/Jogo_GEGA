@@ -7,6 +7,12 @@ public class XPOrb : MonoBehaviour
     public float attractionRange = 4f;
     public float speed           = 6f;
 
+    /* ----------- SFX (única mudança) ----------- */
+    [Header("Áudio de coleta")]
+    [SerializeField] AudioClip pickupSfx;          // arraste seu .wav/.ogg aqui
+    [SerializeField, Range(0f,1f)] float sfxVolume = 0.8f;
+    /* ------------------------------------------- */
+
     Transform player;
     bool      follow;
 
@@ -15,8 +21,8 @@ public class XPOrb : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
         var rb = GetComponent<Rigidbody2D>();
-        rb.bodyType      = RigidbodyType2D.Kinematic;
-        rb.gravityScale  = 0f;
+        rb.bodyType     = RigidbodyType2D.Kinematic;
+        rb.gravityScale = 0f;
 
         GetComponent<CircleCollider2D>().isTrigger = true;
     }
@@ -42,6 +48,11 @@ public class XPOrb : MonoBehaviour
         var xp = col.GetComponent<PlayerExperience>() ??
                  col.GetComponentInChildren<PlayerExperience>();
         if (xp != null) xp.AddXP(xpAmount);
+
+        /* --------- toca o som de pickup --------- */
+        if (pickupSfx)
+            AudioSource.PlayClipAtPoint(pickupSfx, transform.position, sfxVolume);
+        /* ---------------------------------------- */
 
         Destroy(gameObject);
     }
