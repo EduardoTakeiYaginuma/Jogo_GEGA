@@ -18,4 +18,8 @@ public class InitMenuManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void GoGameover()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
