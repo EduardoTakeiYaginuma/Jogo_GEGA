@@ -16156,6 +16156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9137320502841945760}
+  - component: {fileID: 7896268202042851437}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
@@ -16179,6 +16180,18 @@ Transform:
   - {fileID: 3600341159579610885}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7896268202042851437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550506051156418790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3aec55ae2f4bcc418bea058ce91b98e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3049961420871639730
 GameObject:
   m_ObjectHideFlags: 0

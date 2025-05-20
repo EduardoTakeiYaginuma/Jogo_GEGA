@@ -1,133 +1,154 @@
+// InfiniteMapGenerator.cs
 using UnityEngine;
 using System.Collections.Generic;
 
 public class InfiniteMapGenerator : MonoBehaviour
 {
-    [Header("Referências")]
-    [Tooltip("Arraste aqui o Transform do Player ou da MainCamera")]
-    [SerializeField] private Transform player;
-    [Tooltip("Arraste aqui o prefab do chunk para instanciar novos")]
-    [SerializeField] private GameObject chunkPrefab;
+    [Header("References")]
+    [SerializeField] Transform  player;
+    [SerializeField] GameObject chunkPrefab;
 
-    [Header("Origem do mapa em world coords")]
-    [Tooltip("Se o chunk (0,0) já estiver em outro lugar, defina aqui")]
-    [SerializeField] private Vector2 mapOrigin = new Vector2(9.029942f, 0.9167452f);
+    [Header("Map origin (world)")]
+    [SerializeField] Vector2 mapOrigin = new(9.029942f, 0.9167452f);
 
-    [Header("Tamanho do Chunk (unidades)")]
-    [SerializeField] private int chunkWidth = 40;
-    [SerializeField] private int chunkHeight = 40;
+    [Header("Chunk size (world units)")]
+    [SerializeField] int chunkWidth  = 40;
+    [SerializeField] int chunkHeight = 40;
 
-    [Header("Raio de renderização (chunks)")]
-    [SerializeField, Range(1, 8)] private int renderDistance = 4;
+    [Header("Extra padding (chunks)")]
+    [SerializeField] int padding = 1;   // 1-chunk de folga além da tela
 
-    private Vector2Int currentChunk;
-    private readonly Dictionary<Vector2Int, GameObject> activeChunks = new Dictionary<Vector2Int, GameObject>();
+    readonly Dictionary<Vector2Int, GameObject> active = new();
+    readonly Queue<GameObject> pool = new();
 
-    private void Awake()
+    Vector2Int currentChunk;
+    int        renderDist;
+
+    /* ---------------- LIFECYCLE ---------------- */
+
+    void Awake()
     {
-        // Remove qualquer filho existente (incluindo chunk estático)
-        foreach (Transform child in transform)
-            Destroy(child.gameObject);
-        activeChunks.Clear();
+        foreach (Transform t in transform) Destroy(t.gameObject);
+        active.Clear();
     }
 
-    private void Start()
+    void Start()
     {
-        if (player == null || chunkPrefab == null)
-        {
-            Debug.LogError("InfiniteMapGenerator: Player ou chunkPrefab não estão atribuídos!");
-            enabled = false;
-            return;
-        }
+        if (!player || !chunkPrefab) { enabled = false; return; }
 
-        // Define o chunk inicial de acordo com a posição do player
+        renderDist   = CalcRenderDist();
         currentChunk = WorldToChunk(player.position);
-
-        // Gera todos os chunks iniciais ao redor
-        for (int x = -renderDistance; x <= renderDistance; x++)
-            for (int y = -renderDistance; y <= renderDistance; y++)
-                TrySpawn(new Vector2Int(currentChunk.x + x, currentChunk.y + y));
+        SpawnInitialRing();
     }
 
-    private void Update()
+    void Update()
     {
-        Vector2Int newChunk = WorldToChunk(player.position);
-        if (newChunk != currentChunk)
-        {
-            OnChunkChanged(currentChunk, newChunk);
-            currentChunk = newChunk;
-        }
+        int desired = CalcRenderDist();
+        if (desired != renderDist) renderDist = desired;
+
+        Vector2Int nc = WorldToChunk(player.position);
+        if (nc == currentChunk) return;
+
+        OnChunkChanged(currentChunk, nc);
+        currentChunk = nc;
     }
 
-    // Converte posição world em coordenada de chunk, levando em conta a origem (offset)
-    private Vector2Int WorldToChunk(Vector3 pos)
+    /* ---------------- CORE ---------------- */
+
+    Vector2Int WorldToChunk(Vector3 pos)
     {
-        float localX = pos.x - mapOrigin.x;
-        float localY = pos.y - mapOrigin.y;
-        int cx = Mathf.FloorToInt(localX / chunkWidth);
-        int cy = Mathf.FloorToInt(localY / chunkHeight);
-        return new Vector2Int(cx, cy);
+        float lx = pos.x - mapOrigin.x;
+        float ly = pos.y - mapOrigin.y;
+        return new Vector2Int(
+            Mathf.FloorToInt(lx / chunkWidth),
+            Mathf.FloorToInt(ly / chunkHeight)
+        );
     }
 
-    private void OnChunkChanged(Vector2Int oldC, Vector2Int newC)
+    int CalcRenderDist()
+    {
+        Camera cam = Camera.main;
+        float halfH = cam.orthographicSize;
+        float halfW = halfH * cam.aspect;
+        float maxExtent = Mathf.Max(halfW, halfH);
+        return Mathf.CeilToInt(maxExtent / Mathf.Min(chunkWidth, chunkHeight)) + padding;
+    }
+
+    void SpawnInitialRing()
+    {
+        for (int dx = -renderDist; dx <= renderDist; dx++)
+            for (int dy = -renderDist; dy <= renderDist; dy++)
+                TrySpawn(new Vector2Int(currentChunk.x + dx,
+                                        currentChunk.y + dy));
+    }
+
+    void OnChunkChanged(Vector2Int oldC, Vector2Int newC)
     {
         int dx = newC.x - oldC.x;
         int dy = newC.y - oldC.y;
 
-        // Spawn da nova borda em X
         if (dx != 0)
         {
-            int spawnX = newC.x + dx * renderDistance;
-            for (int y = newC.y - renderDistance; y <= newC.y + renderDistance; y++)
-                TrySpawn(new Vector2Int(spawnX, y));
+            int sx = newC.x + dx * renderDist;
+            for (int y = newC.y - renderDist; y <= newC.y + renderDist; y++)
+                TrySpawn(new Vector2Int(sx, y));
         }
-
-        // Spawn da nova borda em Y
         if (dy != 0)
         {
-            int spawnY = newC.y + dy * renderDistance;
-            for (int x = newC.x - renderDistance; x <= newC.x + renderDistance; x++)
-                TrySpawn(new Vector2Int(x, spawnY));
+            int sy = newC.y + dy * renderDist;
+            for (int x = newC.x - renderDist; x <= newC.x + renderDist; x++)
+                TrySpawn(new Vector2Int(x, sy));
         }
-
-        // Spawn do canto diagonal (quando dx e dy são não-zero)
         if (dx != 0 && dy != 0)
-        {
-            TrySpawn(new Vector2Int(
-                newC.x + dx * renderDistance,
-                newC.y + dy * renderDistance
-            ));
-        }
+            TrySpawn(new Vector2Int(newC.x + dx * renderDist,
+                                    newC.y + dy * renderDist));
 
-        // Destrói chunks fora do raio de renderização
-        List<Vector2Int> toRemove = new List<Vector2Int>();
-        foreach (var kv in activeChunks)
+        List<Vector2Int> toRemove = new();
+        foreach (var kv in active)
         {
-            var coord = kv.Key;
-            if (Mathf.Abs(coord.x - newC.x) > renderDistance || Mathf.Abs(coord.y - newC.y) > renderDistance)
+            if (Mathf.Abs(kv.Key.x - newC.x) > renderDist ||
+                Mathf.Abs(kv.Key.y - newC.y) > renderDist)
             {
-                Destroy(kv.Value);
-                toRemove.Add(coord);
+                Recycle(kv.Value);
+                toRemove.Add(kv.Key);
             }
         }
-        foreach (var coord in toRemove)
-            activeChunks.Remove(coord);
+        foreach (var c in toRemove) active.Remove(c);
     }
 
-    // Tenta spawnar apenas se ainda não existir aquele chunk
-    private void TrySpawn(Vector2Int coord)
+    /* ---------------- SPAWN / POOL ---------------- */
+
+    void TrySpawn(Vector2Int coord)
     {
-        if (activeChunks.ContainsKey(coord)) return;
-        SpawnChunk(coord);
+        if (active.ContainsKey(coord)) return;
+
+        float wx = coord.x * chunkWidth  + mapOrigin.x;
+        float wy = coord.y * chunkHeight + mapOrigin.y;
+        Vector3 wpos = new(wx, wy, 0f);
+
+        GameObject chunk = pool.Count > 0 ? pool.Dequeue()
+                                          : Instantiate(chunkPrefab);
+        chunk.transform.SetParent(transform);
+        chunk.transform.position = wpos;
+        chunk.SetActive(true);
+
+        Bounds bounds = new(
+            new Vector3(wx + chunkWidth * 0.5f,
+                        wy + chunkHeight * 0.5f,
+                        0f),
+            new Vector3(chunkWidth, chunkHeight, 1f));
+
+        var tc = chunk.GetComponentInChildren<TerrainChunk>();
+        if (tc) tc.Configure(bounds);
+
+        XPSpawnManager.Instance?.SpawnOrbsInChunk(bounds, chunk.transform);
+
+        active[coord] = chunk;
     }
 
-    // Instancia o chunk no world, aplicando o offset de origem
-    private void SpawnChunk(Vector2Int coord)
+    void Recycle(GameObject go)
     {
-        float worldX = coord.x * chunkWidth + mapOrigin.x;
-        float worldY = coord.y * chunkHeight + mapOrigin.y;
-        Vector3 worldPos = new Vector3(worldX, worldY, 0f);
-        GameObject chunk = Instantiate(chunkPrefab, worldPos, Quaternion.identity, transform);
-        activeChunks[coord] = chunk;
+        go.SetActive(false);
+        pool.Enqueue(go);
     }
 }

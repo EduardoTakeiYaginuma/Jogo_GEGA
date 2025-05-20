@@ -4,8 +4,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    /* ------------ PUBLIC FIELDS (expostos no Inspector) ------------ */
-
     public float walkSpeed;
     public float runSpeed;
 
@@ -20,20 +18,16 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask enemyLayers;
 
     [Header("Limites mínimos")]
-    public float minAttackCooldown = 0.25f;   // não deixa spammar
-    public float minFullRecovery   = 0.50f;   // evita recarga instantânea
-
-    /* ------------ RUNTIME ------------ */
+    public float minAttackCooldown = 0.25f;
+    public float minFullRecovery   = 0.50f;
 
     float currentStamina;
     float staminaRegenRate;
     float nextAttackTime;
 
-    /* escalas acumuladas pelos upgrades */
-    float staminaScale = 1f;   // +10 % máx por carta
-    float regenScale   = 1f;   // −10 % tempo por carta
+    float staminaScale = 1f;
+    float regenScale   = 1f;
 
-    /* guarda valores-base originais */
     float baseMaxStamina;
     float baseRecovery;
 
@@ -48,8 +42,9 @@ public class PlayerMovement : MonoBehaviour
     static readonly int ISMOVE = Animator.StringToHash("IsMoving");
     static readonly int TR_ATK = Animator.StringToHash("Attack");
 
-    bool    isAttacking;
-    bool    isRunning;
+    bool isAttacking;
+    bool isRunning;
+    bool staminaLocked;          // trava o Shift quando zera
     Vector2 moveInput;
 
     /* =============================================================== */
@@ -71,7 +66,13 @@ public class PlayerMovement : MonoBehaviour
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"),
                                 Input.GetAxisRaw("Vertical")).normalized;
 
-        bool wantsRun = Input.GetKey(KeyCode.LeftShift) && moveInput != Vector2.zero;
+        bool shiftHeld = Input.GetKey(KeyCode.LeftShift);
+
+        /* ---- gerencia lock da stamina ---- */
+        if (currentStamina <= 0f && !staminaLocked) staminaLocked = true;
+        if (!shiftHeld && staminaLocked)            staminaLocked = false;
+
+        bool wantsRun = shiftHeld && !staminaLocked && moveInput != Vector2.zero;
         isRunning     = wantsRun && currentStamina > 0f;
 
         anim.SetFloat(H, moveInput.x);
@@ -85,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             float drain = Time.deltaTime / staminaScale;
             currentStamina = Mathf.Max(0f, currentStamina - drain);
         }
-        else if (!Input.GetKey(KeyCode.LeftShift) && currentStamina < maxStamina)
+        else if (currentStamina < maxStamina)   // regenera mesmo se Shift ainda segurado
         {
             currentStamina = Mathf.Min(maxStamina,
                                        currentStamina + staminaRegenRate * Time.deltaTime);
@@ -127,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
                 var px = Object.FindFirstObjectByType<PlayerExperience>();
                 if (px != null) px.AddXP(enemy.XPDrop);
 
-                KillCounter.Instance?.RegisterKill();   // +1 kill
+                KillCounter.Instance?.RegisterKill();
             }
 
         yield return new WaitForSeconds(clipLen - hitTime);
@@ -137,19 +138,18 @@ public class PlayerMovement : MonoBehaviour
 
     /* ===================  UPGRADES  =================== */
 
-    public void IncreaseMaxStamina(float pct)   // +10 % máx
+    public void IncreaseMaxStamina(float pct)
     {
         staminaScale *= 1f + pct;
         RecomputeStaminaStats();
     }
 
-    public void BoostStaminaRegen(float pct)    // −10 % tempo
+    public void BoostStaminaRegen(float pct)
     {
         regenScale *= 1f - pct;
         RecomputeStaminaStats();
     }
 
-    // chamado pelo UIManager após diminuir 10 % do CD
     public void ClampAttackCooldown()
     {
         attackCooldown = Mathf.Max(attackCooldown, minAttackCooldown);
@@ -164,7 +164,6 @@ public class PlayerMovement : MonoBehaviour
         currentStamina   = Mathf.Min(currentStamina, maxStamina);
     }
 
-    /* gizmo */
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
